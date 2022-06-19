@@ -28,5 +28,5 @@ pre[class*="language-"] {
   @apply bg-gray-100;
   @apply px-2;
   @apply py-1;
-  white-space: normal;
+  @apply whitespace-normal;
 }
