@@ -80,12 +80,12 @@ One of the most difficult things about getting started with programming is that 
 ## Drawing
 
 ### The Coordinate System
-Often, the first line of a simple Processing sketch contains a call to the function `size()`, which in Processing creates a _display window_ of with the given dimensions in pixels:  
+Often, the first line of a simple Processing sketch contains a call to the function `size()`{.language-js}, which in Processing creates a _display window_ of with the given dimensions in pixels:  
 ```java
 size(200, 200);
 ```
 
-The equivalent in P5.js is to call `createCanvas()` to create an HTML `<canvas>` element on the webpage:
+The equivalent in P5.js is to call `createCanvas()`{.language-js} to create an HTML `<canvas>`{.language-html} element on the webpage:
 ```js
 createCanvas(200, 200);
 ```
