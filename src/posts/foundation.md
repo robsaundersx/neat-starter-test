@@ -94,7 +94,7 @@ line(10, 90, 70, 20);
 
 `line(10, 90, 70, 20);`{.language-java}
 
-<p><code class="language-java">line(10, 90, 70, 20);<c/code></p>
+<p><code class="language-java">line(10, 90, 70, 20);</code></p>
 
 <code class="language-java">line(10, 90, 70, 20);</code>
 
