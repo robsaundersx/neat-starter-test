@@ -16,7 +16,7 @@ Processing is a programming environment that was first created to make it easier
 
 > NOTE: Should I try to cover both Processing and P5.js in a single document or create two versions of the same document, one using Processing and the other using P5.js?
 
-> NOTE: Can P5.js send OSC messages? Can P5.js talk to Arduino?
+> NOTE: Can P5.js send OSC messages? Can P5.js talk to Arduino? {.text-orange-500}
 
 The latest version of Processing can be downloaded from https://processing.org/download/
 
