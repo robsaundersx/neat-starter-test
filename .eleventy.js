@@ -1,5 +1,7 @@
 const yaml = require("js-yaml");
 const { DateTime } = require("luxon");
+const markdownIt = require("markdown-it");
+const markdownItAnchor = require("markdown-it-anchor");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const htmlmin = require("html-minifier");
 
@@ -23,6 +25,22 @@ module.exports = function (eleventyConfig) {
   // To Support .yaml Extension in _data
   // You may remove this if you can use JSON
   eleventyConfig.addDataExtension("yaml", (contents) => yaml.load(contents));
+
+  // Customize Markdown library and settings:
+  let markdownLibrary = markdownIt({
+    html: true,
+    breaks: true,
+    linkify: true
+  }).use(markdownItAnchor, {
+    permalink: markdownItAnchor.permalink.ariaHidden({
+      placement: "after",
+      class: "direct-link",
+      symbol: "#",
+      level: [1,2,3,4],
+    }),
+    slugify: eleventyConfig.getFilter("slug")
+  });
+  eleventyConfig.setLibrary("md", markdownLibrary);
 
   // Copy Static Files to /_Site
   eleventyConfig.addPassthroughCopy({
