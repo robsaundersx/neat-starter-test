@@ -49,19 +49,22 @@ module.exports = function (eleventyConfig) {
     let i = token.attrIndex("class");
     let language = "";
     if (i < 0) {
-      return "<code" + slf.renderAttrs(token) + ">" + markdownLibrary.escapeHtml(str) + "</code>";
+      // return "<code" + slf.renderAttrs(token) + ">" + markdownLibrary.escapeHtml(str) + "</code>";
+      return "<code" + slf.renderAttrs(token) + ">" + str + "</code>";
     }
     let tokenClass = token.attrs[i];
     let regexpLanguage = /language-([a-z]+)/gi;
     let match = regexpLanguage.exec(classAttr);
     if (!match) {
-      return "<code" + slf.renderAttrs(token) + ">" + markdownLibrary.escapeHtml(str) + "</code>";
+      // return "<code" + slf.renderAttrs(token) + ">" + markdownLibrary.escapeHtml(str) + "</code>";
+      return "<code" + slf.renderAttrs(token) + ">" + str + "</code>";
     }
     language = match[1];
     if ( ! Prism.languages[language] ) {
       PrismLoader(language);
     }
-    let highlighted = Prism.highlight(str, Prism.languages[language], language) || markdownLibrary.escapeHtml(str);
+    // let highlighted = Prism.highlight(str, Prism.languages[language], language) || markdownLibrary.escapeHtml(str);
+    let highlighted = Prism.highlight(str, Prism.languages[language], language) || str;
     return "<code" + slf.renderAttrs(token) + ">" + highlighted + "</code>";
   };
   eleventyConfig.setLibrary("md", markdownLibrary);
