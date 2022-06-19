@@ -73,7 +73,7 @@ One of the most difficult things about getting started with programming is that 
 ## Drawing
 
 ### The Coordinate System
-Often, the first line of a simple Processing sketch contains a call to the function `size(200, 200)`{.language-js}, which in Processing creates a _display window_ of with the given dimensions in pixels:  
+Often, the first line of a simple Processing sketch contains a call to the function `size(200, 200)`{.language-java}, which in Processing creates a _display window_ of with the given dimensions in pixels:  
 ```java
 size(200, 200);
 ```
