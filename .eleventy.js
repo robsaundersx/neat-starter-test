@@ -4,6 +4,7 @@ const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const markdownItAttrs = require('markdown-it-attrs');
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const prism = require("prismjs");
 const htmlmin = require("html-minifier");
 
 module.exports = function (eleventyConfig) {
@@ -40,6 +41,13 @@ module.exports = function (eleventyConfig) {
   // //   }),
   // //   slugify: eleventyConfig.getFilter("slug")
   // // })
+  markdownLibrary.renderer.rules.code_inline = (tokens, idx, options, env, slf) => {
+    const token = tokens[idx];
+    let str = tokens[idx].content;
+    let language = "java";
+    // return "<code" + slf.renderAttrs(token) + ">" + escapeHtml(str) + "</code>";
+    return "<code" + slf.renderAttrs(token) + ">" + prism.highlight(str, prism.languages(language), language) + "</code>";
+  };
   eleventyConfig.setLibrary("md", markdownLibrary);
 
   // Syntax Highlighting for Code blocks
