@@ -46,7 +46,7 @@ module.exports = function (eleventyConfig) {
     let str = tokens[idx].content;
     let language = "java";
     // return "<code" + slf.renderAttrs(token) + ">" + escapeHtml(str) + "</code>";
-    return "<code" + slf.renderAttrs(token) + ">" + prism.highlight(str, prism.languages(language), language) + "</code>";
+    return "<code" + slf.renderAttrs(token) + ">" + prism.highlight(str, prism.languages[language], language) + "</code>";
   };
   eleventyConfig.setLibrary("md", markdownLibrary);
 
