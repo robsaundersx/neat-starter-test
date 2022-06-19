@@ -12,18 +12,11 @@ tags:
 ## Introduction
 Processing is a programming environment that was first created to make it easier to develop visual applications with an emphasis on generative techniques, animation and interaction. The original developers of Processing wanted to be able to "sketch" ideas in code, this idea of quickly implementing ideas in code remains evident in the use of the terms "sketch" and "sketchbook" to refer to individual programs and collections of programs that you create over time. As its capabilities have expanded over the past two decades, Processing has come to be used for more advanced applications. Originally developed around a domain-specific extension to the Java programming language, intended for digital artists and designers, Processing has evolved into a full-blown design and prototyping tool used for large-scale art installations, motion graphics production, complex data visualisation, and creative tools development. Case studies of Processing used in production can be found at https://processing.org/exhibition/
 
+> TODO: Something about Processing being translated to Javascript and Python
 
-<div class="warning">
-TODO: Something about Processing being translated to Javascript and Python
-</div>
+> NOTE: Should I try to cover both Processing and P5.js in a single document or create two versions of the same document, one using Processing and the other using P5.js?
 
-<div class="warning">
-NOTE: Should I try to cover both Processing and P5.js in a single document or create two versions of the same document, one using Processing and the other using P5.js?
-</div>
-
-<div class="warning">
-NOTE: Can P5.js send OSC messages? Can P5.js talk to Arduino?
-</div>
+> NOTE: Can P5.js send OSC messages? Can P5.js talk to Arduino?
 
 The latest version of Processing can be downloaded from https://processing.org/download/
 
@@ -184,9 +177,9 @@ rect(20, 20, 40, 60);
   new p5(order_sketch2, "order_sketch2_container");
 </script>
 
-<div class="warning">TODO: Drawing Modes</div>
+> TODO: Drawing Modes
 
-<div class="warning">TODO: Drawing Styles?</div>
+> TODO: Drawing Styles?
 
 ## Programming Basics
 
@@ -234,8 +227,8 @@ Data Type | Example Usage | Usage Description
 
 In addition to the above data types, which all come from the Java programming language, Processing adds a special data type, `color`, for specifying and working with colours. We will return to the topic of working with colours later.
 
-<div class="warning">TODO: Add section on color data type?</div>
-<div class="warning">TODO: Statements</div>
+> TODO: Add section on color data type?
+> TODO: Statements
 
 ### Conditionals
 A conditional checks that a condition has been met before executing a code block. The code between the curly braces `{` `}` is called a code block, and is something that you will see a lot in Processing.
