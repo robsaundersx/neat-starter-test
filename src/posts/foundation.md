@@ -285,16 +285,6 @@ In addition to relational operators described above, logic operators can be used
 `!`{.language-java} **Logical NOT**
 : `!a`{.language-java} is true if `a`{.language-java} is false
 
-`||`{.language-java} **Logical OR**
-> `a || b`{.language-java} is true if `a`{.language-java} or `b`{.language-java} (or both) are true.
-
-`&&`{.language-java} **Logical AND**
-> `a && b`{.language-java} is true if (and only if) both `a`{.language-java} and `b`{.language-java} are true
-
-`!`{.language-java} **Logical NOT**
-> `!a`{.language-java} is true if `a`{.language-java} is false
-
-
 ### Loops
 As you write more programs, you'll notice that patterns occur when lines of code are repeated, but with slight variations. A code structure called a loop makes it possible to run a line of code more than once to condense this type of repetition into fewer lines. This makes your programs more modular and easier to change.
 

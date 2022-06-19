@@ -25,3 +25,11 @@ h3 {
   @apply py-1;
   @apply font-normal;
 }
+
+dt {
+  @apply font-bold;
+}
+
+dd {
+  @apply ml-2;
+}
