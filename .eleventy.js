@@ -44,7 +44,7 @@ module.exports = function (eleventyConfig) {
   markdownLibrary.renderer.rules.code_inline = (tokens, idx, options, env, slf) => {
     const token = tokens[idx];
     let str = tokens[idx].content;
-    let language = "java";
+    let language = "javascript";
     // return "<code" + slf.renderAttrs(token) + ">" + escapeHtml(str) + "</code>";
     return "<code" + slf.renderAttrs(token) + ">" + prism.highlight(str, prism.languages[language], language) + "</code>";
   };
