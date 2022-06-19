@@ -14,7 +14,12 @@ h3 {
 
 /* Syntax Highlighting*/
 
-body :not(pre) > code[class*="language-"],
+/* Block code */
 body pre[class*="language-"] {
   @apply bg-gray-800;
+}
+
+/* Inline code */
+body :not(pre) > code[class*="language-"] {
+  @apply bg-gray-200;
 }
