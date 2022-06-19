@@ -217,7 +217,7 @@ This is an example of a sketch that uses Processing to generate complex patterns
 ```
 
 ### Variables
-A variable stores a value in memory so that it can be used later in a program. The variable can be used many times within a single program, and the value is easily changed while the program is running. When you create variables, you determine the name, the data type, and the value. The name is what you decide to call the variable. Choose a name that is informative about what the variable stores, but be consistent and not too verbose. For instance, the variable name “radius” will be clearer than “r” when you look at the code later. When declaring a variable, you also need to specify its data type (such as int), which indicates what kind of information is being stored. There are data types to store each kind of data: integers (whole numbers), floating-point (decimal) numbers, characters, words, images, fonts, and so on. After the data type and name are set, a value can be assigned to the variable. Remember that each variable can only be used once with the same name in the same part of the program.
+A variable stores a value in memory so that it can be used later in a program. The variable can be used many times within a single program, and the value is easily changed while the program is running. When you create variables, you determine the name, the data type, and the value. The name is what you decide to call the variable. Choose a name that is informative about what the variable stores, but be consistent and not too verbose. For instance, the variable name `radius`{.language-java} will be clearer than `r`{.language-java} when you look at the code later. When declaring a variable, you also need to specify its data type (such as int), which indicates what kind of information is being stored. There are data types to store each kind of data: integers (whole numbers), floating-point (decimal) numbers, characters, words, images, fonts, and so on. After the data type and name are set, a value can be assigned to the variable. Remember that each variable can only be used once with the same name in the same part of the program.
 
 ```java
 int x = 12; // Declare x as an int variable and assign a value
@@ -225,15 +225,15 @@ int x = 12; // Declare x as an int variable and assign a value
 
 The most common Processing data types:
 
-Data Type | Example Usage | Usage Description
----------:|:--------------|:-----------------
-`int` | `int number = 2;` | An integer (whole number).
-`float` | `float number = 3.14;` | A floating-point (decimal) number.
-`boolean` | `boolean fact = true;` | A true or false (logical) value.
-`char` | `char key = 'a';` | A letter or Unicode symbol.
-`String` | `String name = "hello";` | A list (or string) of chars.
+                Data Type | Example Usage                            | Usage Description
+-------------------------:|:-----------------------------------------|:----------------------------------
+`int`{.language-java}     | `int number = 2;`{.language-java}        | An integer (whole number).
+`float`{.language-java}   | `float number = 3.14;`{.language-java}   | A floating-point (decimal) number.
+`boolean`{.language-java} | `boolean fact = true;`{.language-java}   | A true or false (logical) value.
+`char`{.language-java}    | `char key = 'a';`{.language-java}        | A letter or Unicode symbol.
+`String`{.language-java}  | `String name = "hello";`{.language-java} | A list (or string) of chars.
 
-In addition to the above data types, which all come from the Java programming language, Processing adds a special data type, `color`, for specifying and working with colours. We will return to the topic of working with colours later.
+In addition to the above data types, which all come from the Java programming language, Processing adds a special data type, `color`{.language-java}, for specifying and working with colours. We will return to the topic of working with colours later.
 
 > TODO: Add section on color data type?
 > TODO: Statements
