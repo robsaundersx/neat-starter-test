@@ -34,7 +34,7 @@ module.exports = function (eleventyConfig) {
     leftDelimiter: '{',
     rightDelimiter: '}',
     allowedAttributes: []  // empty array = all attributes are allowed
-  }).use(markdownItDefLists, {
+  }).use(markdownItDefList, {
   });
   // // .use(markdownItAnchor, {
   // //   permalink: markdownItAnchor.permalink.ariaHidden({
