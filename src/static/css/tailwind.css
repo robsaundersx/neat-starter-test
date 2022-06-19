@@ -14,6 +14,10 @@ h3 {
 
 /* Syntax Highlighting*/
 
+body ol {
+  @apply list-decimal;
+}
+
 /* Block code */
 body pre[class*="language-"] {
   @apply bg-gray-800;
