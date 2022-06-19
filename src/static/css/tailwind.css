@@ -21,7 +21,6 @@ h3 {
 
 /* Inline code */
 .prose :not(pre) > code[class*="language-"] {
-  @apply bg-gray-100;
   @apply px-2;
   @apply py-1;
 }
