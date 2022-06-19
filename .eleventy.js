@@ -32,20 +32,21 @@ module.exports = function (eleventyConfig) {
     html: true,
     breaks: true,
     linkify: true
-  }).use(markdownItAnchor, {
-    permalink: markdownItAnchor.permalink.ariaHidden({
-      placement: "after",
-      class: "direct-link",
-      symbol: "#",
-      level: [1,2,3,4],
-    }),
-    slugify: eleventyConfig.getFilter("slug")
   }).use(markdownItAttrs, {
     // optional, these are default options
     leftDelimiter: '{',
     rightDelimiter: '}',
     allowedAttributes: []  // empty array = all attributes are allowed
   });
+  // .use(markdownItAnchor, {
+  //   permalink: markdownItAnchor.permalink.ariaHidden({
+  //     placement: "after",
+  //     class: "direct-link",
+  //     symbol: "#",
+  //     level: [1,2,3,4],
+  //   }),
+  //   slugify: eleventyConfig.getFilter("slug")
+  // })
   eleventyConfig.setLibrary("md", markdownLibrary);
 
   // Copy Static Files to /_Site
