@@ -241,7 +241,7 @@ In addition to the above data types, which all come from the Java programming la
 ### Conditionals
 A conditional checks that a condition has been met before executing a code block. The code between the curly braces `{`{.language-java} `}`{.language-java} is called a code block, and is something that you will see a lot in Processing.
 
-In the following code, the conditional tests whether the value of `diam`{.language-java} is less than or equal to 400. If it is, the code block (inside the curly braces) executes. If not, the code block is skipped:
+In the following code, the conditional tests whether the value of `diam`{.language-java} is less than or equal to `400`{.language-java}. If it is, the code block (inside the curly braces) executes. If not, the code block is skipped:
 
 ```java
 // check a condition
@@ -253,14 +253,14 @@ if (diam <= 400) {
 
 The conditional statement can be expressed as a comparison between two values with a relational operator. Relational operators inclulde:
 
-Operator                 | Example Usage            | Description
------------------------: | :----------------------- | :-----------------------
-     `>`{.language-java} | `a > b`{.language-java}  | Greater than
-     `<`{.language-java} | `a < b`{.language-java}  | Less than
-    `>=`{.language-java} | `a >= b`{.language-java} | Greater than or equal to
-    `<=`{.language-java} | `a <= b`{.language-java} | Less than or equal to
-    `==`{.language-java} | `a == b`{.language-java} | Equal to
-    `!=`{.language-java} | `a != b`{.language-java} | Not equal to
+Operator             | Example Usage            | Description
+-------------------: | :----------------------- | :-----------------------
+`>`{.language-java}  | `a > b`{.language-java}  | Greater than
+`<`{.language-java}  | `a < b`{.language-java}  | Less than
+`>=`{.language-java} | `a >= b`{.language-java} | Greater than or equal to
+`<=`{.language-java} | `a <= b`{.language-java} | Less than or equal to
+`==`{.language-java} | `a == b`{.language-java} | Equal to
+`!=`{.language-java} | `a != b`{.language-java} | Not equal to
 
 You can also use an `else` clause as part of a conditional statement, which provides a block of code to be executed if the condition isn't met:
 
@@ -276,15 +276,15 @@ By setting a conditional you're creating two (or more) different paths that the 
 
 In addition to relational operators described above, logic operators can be used to combine the results of condition tests. Logic operators include:
 
-Logical OR is written as `||` — `a || b` is true if `a` or `b` (or both) are true.
-Logical AND is written as `&&` — `a && b` is true if (and only if) both `a` and `b` are true
-Logical NOT is written as `!` — `!a` is true if `a` is false
+Logical OR is written as `||`{.language-java} — `a || b`{.language-java} is true if `a`{.language-java} or `b`{.language-java} (or both) are true.
+Logical AND is written as `&&`{.language-java} — `a && b`{.language-java} is true if (and only if) both `a`{.language-java} and `b`{.language-java} are true
+Logical NOT is written as `!`{.language-java} — `!a`{.language-java} is true if `a`{.language-java} is false
 
 ### Loops
 As you write more programs, you'll notice that patterns occur when lines of code are repeated, but with slight variations. A code structure called a loop makes it possible to run a line of code more than once to condense this type of repetition into fewer lines. This makes your programs more modular and easier to change.
 
 #### While Loops
-While loops are the simplest kind of loop, they repeat the execution of the code within the loop's code block (indicated with curly braces) as long as the conditional test (within the round parentheses) is true. The following code prints the numbers from `99` to `1` on the _console_ and then finishes by printing `zero`.
+While loops are the simplest kind of loop, they repeat the execution of the code within the loop's code block (indicated with curly braces) as long as the conditional test (within the round parentheses) is true. The following code prints the numbers from `99`{.language-java} to `1`{.language-java} on the _console_ and then finishes by printing `zero`{.language-java}.
 
 ```java
 int number = 99;
@@ -304,7 +304,7 @@ for (initialisation; test; update) {
 }
 ```
 
-The code block will be executed on each iteration of the loop. Inside the round parentheses are three statements, separated by semicolons, that work together to control how many times the code inside is executed. From left to right, these statements are referred to as _initialisation_, _test_, and _update_. The _initialisation_ typically declares a new variable to use within the for loop and assigns it a value. (The variable name `i` is frequently used, but is not the only, and often not the best option.) The _initialisation_ is executed only once at the start of the loop. The _test_ checks whether the loop should continue, typically this evaluates the value of the variable created in the _initialisation_, the code in the _test_ is executed before the code block is executed. Finally, _update_ is after the code block each time it is executed, typically _update_ changes the value of the variable created in _initialisation_ and checked in _test_.
+The code block will be executed on each iteration of the loop. Inside the round parentheses are three statements, separated by semicolons, that work together to control how many times the code inside is executed. From left to right, these statements are referred to as _initialisation_, _test_, and _update_. The _initialisation_ typically declares a new variable to use within the for loop and assigns it a value. (The variable name `i`{.language-java} is frequently used, but is not the only, and often not the best option.) The _initialisation_ is executed only once at the start of the loop. The _test_ checks whether the loop should continue, typically this evaluates the value of the variable created in the _initialisation_, the code in the _test_ is executed before the code block is executed. Finally, _update_ is after the code block each time it is executed, typically _update_ changes the value of the variable created in _initialisation_ and checked in _test_.
 
 Here is an flow diagram that summarises the above description:
 ```mermaid
@@ -324,9 +324,10 @@ for (int i = 0; i < 10; i++) {
 }
 ```
 
-Notice that this loop _does not_ print `10` to the console. This is because the test `i < 10` evaluates to `false` (i.e. `10 < 10` is not true) _before_ the code block is executed.
+Notice that this loop _does not_ print `10`{.language-java} to the console. This is because the test `i < 10`{.language-java} evaluates to `false`{.language-java} (i.e. `10 < 10`{.language-java} is not true) _before_ the code block is executed.
 
-Here's an example of using a `for` loop to draw a simple pattern:
+Here's an example of using a `for`{.language-java} loop to draw a simple pattern:
+
 ```java
 size(400, 200);
 strokeWeight(5);
@@ -353,7 +354,7 @@ This is what this sketch looks like when run:
   let loop_sketch1_instance = new p5(loop_sketch1, "loop_sketch1_container");
 </script>
 
-For comparison, here is the same pattern drawn with a `while` loop:
+For comparison, here is the same pattern drawn with a `while`{.language-java} loop:
 ```java
 size(400, 200);
 strokeWeight(5);
@@ -363,7 +364,7 @@ while(x <= width-40) {
   x += 20;
 }
 ```
-Notice how the elements of the `for` loop are still present in the `while` loop, i.e., `int x = 40;` appears before the loop, `x <= width-40` appears in the conditional test, and `x += 20` appears at the end of the code block. The advantage of using a `for` loop is that these three elements are brought together in one place, so it is often easier to see how they will work.
+Notice how the elements of the `for`{.language-java} loop are still present in the `while`{.language-java} loop, i.e., `int x = 40;`{.language-java} appears before the loop, `x <= width-40`{.language-java} appears in the conditional test, and `x += 20`{.language-java} appears at the end of the code block. The advantage of using a `for`{.language-java} loop is that these three elements are brought together in one place, so it is often easier to see how they will work.
 
 And it produces exactly the same pattern:
 
@@ -417,18 +418,18 @@ for (int x = 10; x < width; x += 15) {
   let loop_sketch3_instance = new p5(loop_sketch3, "loop_sketch3_container");
 </script>
 
-For each line in y-direction (`y < height`) the code iterates through every pixel in x-direction (`x < width`) and draws an ellipse at the (x, y) location.
+For each line in y-direction (`y < height`{.language-java}) the code iterates through every pixel in x-direction (`x < width`{.language-java}) and draws an ellipse at the (x, y) location.
 
 ### Style
 
 #### Stroke
 
 #### Colour
-To change colour of shapes drawn to the _display window_ you can use the `background()`, `fill()`, and `stroke()` functions.
+To change colour of shapes drawn to the _display window_ you can use the `background()`{.language-java}, `fill()`{.language-java}, and `stroke()`{.language-java} functions.
 
 The values of the parameters given to these functions indicate the colour to be used for the background of the window, the colour to use to fill shapes, and the colour used to outline shapes.
 
-By default these functions use values between 0 and 255 ==TODO: Why 255?==. When a single value is given `255` represents white, `128` is medium grey, and `0` is black. By default, when three values are given they represent the red, green and blue (RGB) components of a colour. Here's an example of a sketch that displays a wide range of colours using RGB values:
+By default these functions use values between `0` and `255` _TODO: Why 255?_{.text-orange-500}. When a single value is given `255`{.language-java} represents white, `128`{.language-java} is medium grey, and `0`{.language-java} is black. By default, when three values are given they represent the red, green and blue (RGB) components of a colour. Here's an example of a sketch that displays a wide range of colours using RGB values:
 
 ```java
 size(255, 255);
@@ -462,7 +463,7 @@ Specifying RGB values often isn’t very intuitive, so to choose colours, you ca
 
 ==Figure: Color Selector==
 
-The transparency of colours can be controlled by adding an additional parameter. By default, this parameter also takes a value between `0` and `255`: a value of `0` defines the colour as entirely transparent (it won’t display), a value of `255` is entirely opaque. Values between these extremes allow previously drawn colours to show through to some extent.
+The transparency of colours can be controlled by adding an additional parameter. By default, this parameter also takes a value between `0`{.language-java} and `255`{.language-java}: a value of `0`{.language-java} defines the colour as entirely transparent (it won’t display), a value of `255`{.language-java} is entirely opaque. Values between these extremes allow previously drawn colours to show through to some extent.
 
 ```java
 size(400, 200);
@@ -505,11 +506,11 @@ for (int x = 40; x < width - 40; x += 30) {
 ## Exercises
 
 ### Random
-The `random()` function returns random values from within a given range. When given one parameter the range is from `0` to the value given.
+The `random()`{.language-java} function returns random values from within a given range. When given one parameter the range is from `0`{.language-java} to the value given.
 
 #### Example 1: Random rectangles in a line
 
-The following sketch uses `random()` to draw multiple rectangles with different heights. The `random()` returns a `float` (floating-point) value, so the variable assigned a random value should also be a `float`:
+The following sketch uses `random()`{.language-java} to draw multiple rectangles with different heights. The `random()`{.language-java} returns a `float`{.language-java} (floating-point) value, so the variable assigned a random value should also be a `float`{.language-java}:
 
 ```java
 size(400, 200);
@@ -539,7 +540,7 @@ for (int x = 0; x <= width; x += 10) {
 
 #### Example 2: Lines at random angles
 
-When given two parameters, the range of values returned are between the first (minimum) value and the second (maximum) value. The following sketch uses the two parameter version of `random()` to generate values to draw lines at random angles:
+When given two parameters, the range of values returned are between the first (minimum) value and the second (maximum) value. The following sketch uses the two parameter version of `random()`{.language-java} to generate values to draw lines at random angles:
 
 ```java
 size(400, 200);
@@ -566,7 +567,7 @@ for (int x = 40; x <= width - 40; x += 20) {
 
 #### Example 3: Random circles in a grid
 
-The following example uses the two parameter version of `random()` to generate a grid of circles with randomly chosen sizes and colours.
+The following example uses the two parameter version of `random()`{.language-java} to generate a grid of circles with randomly chosen sizes and colours.
 
 ```java
 size(400, 400);
@@ -612,7 +613,7 @@ for (int x = border; x <= width - border; x += step) {
 
 #### Example 4: Random Chords on a Circle
 
-The following example uses the one parameter version of `random()` to choose two angles and draw a connecting line between the positions these angles represent on a circle, centred in the middle of the window.
+The following example uses the one parameter version of `random()`{.language-java} to choose two angles and draw a connecting line between the positions these angles represent on a circle, centred in the middle of the window.
 
 ```java
 size(400, 400);
