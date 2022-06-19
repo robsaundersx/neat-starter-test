@@ -306,7 +306,9 @@ for (initialisation; test; update) {
 
 The code block will be executed on each iteration of the loop. Inside the round parentheses are three statements, separated by semicolons, that work together to control how many times the code inside is executed. From left to right, these statements are referred to as _initialisation_, _test_, and _update_. The _initialisation_ typically declares a new variable to use within the for loop and assigns it a value. (The variable name `i`{.language-java} is frequently used, but is not the only, and often not the best option.) The _initialisation_ is executed only once at the start of the loop. The _test_ checks whether the loop should continue, typically this evaluates the value of the variable created in the _initialisation_, the code in the _test_ is executed before the code block is executed. Finally, _update_ is after the code block each time it is executed, typically _update_ changes the value of the variable created in _initialisation_ and checked in _test_.
 
+<!--
 Here is an flow diagram that summarises the above description:
+
 ```mermaid
 graph TD
 a(initialisation)-->b{test}
@@ -316,6 +318,7 @@ c-->e(update)
 e-->b
 ```
 _Flow diagram for a `for` loop_
+-->
 
 Here is an example of a typical for loop:
 ```java
