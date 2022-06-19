@@ -23,4 +23,5 @@ h3 {
 .prose :not(pre) > code[class*="language-"] {
   @apply px-2;
   @apply py-1;
+  @apply font-normal;
 }
