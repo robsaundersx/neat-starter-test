@@ -1,8 +1,8 @@
 const yaml = require("js-yaml");
 const { DateTime } = require("luxon");
-// const markdownIt = require("markdown-it");
-// const markdownItAnchor = require("markdown-it-anchor");
-// const markdownItAttrs = require('markdown-it-attrs');
+const markdownIt = require("markdown-it");
+const markdownItAnchor = require("markdown-it-anchor");
+const markdownItAttrs = require('markdown-it-attrs');
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const htmlmin = require("html-minifier");
 
@@ -28,16 +28,16 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addDataExtension("yaml", (contents) => yaml.load(contents));
 
   // Customize Markdown library and settings:
-  // let markdownLibrary = markdownIt({
-  //   html: true,
-  //   breaks: true,
-  //   linkify: true
-  // }).use(markdownItAttrs, {
-  //   // optional, these are default options
-  //   leftDelimiter: '{',
-  //   rightDelimiter: '}',
-  //   allowedAttributes: []  // empty array = all attributes are allowed
-  // });
+  let markdownLibrary = markdownIt({
+    html: true,
+    breaks: true,
+    linkify: true
+  }).use(markdownItAttrs, {
+    // optional, these are default options
+    leftDelimiter: '{',
+    rightDelimiter: '}',
+    allowedAttributes: []  // empty array = all attributes are allowed
+  });
   // // .use(markdownItAnchor, {
   // //   permalink: markdownItAnchor.permalink.ariaHidden({
   // //     placement: "after",
