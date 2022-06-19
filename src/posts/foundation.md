@@ -276,18 +276,23 @@ By setting a conditional you're creating two (or more) different paths that the 
 
 In addition to relational operators described above, logic operators can be used to combine the results of condition tests. Logic operators include:
 
-Logical OR is written as `||`{.language-java} — `a || b`{.language-java} is true if `a`{.language-java} or `b`{.language-java} (or both) are true.
-Logical AND is written as `&&`{.language-java} — `a && b`{.language-java} is true if (and only if) both `a`{.language-java} and `b`{.language-java} are true
-Logical NOT is written as `!`{.language-java} — `!a`{.language-java} is true if `a`{.language-java} is false
-
-`||`{.language-java} Logical OR
+`||`{.language-java} **Logical OR**
 : `a || b`{.language-java} is true if `a`{.language-java} or `b`{.language-java} (or both) are true.
 
-`&&`{.language-java} Logical AND
+`&&`{.language-java} **Logical AND**
 : `a && b`{.language-java} is true if (and only if) both `a`{.language-java} and `b`{.language-java} are true
 
-`!`{.language-java} Logical NOT
+`!`{.language-java} **Logical NOT**
 : `!a`{.language-java} is true if `a`{.language-java} is false
+
+`||`{.language-java} **Logical OR**
+> `a || b`{.language-java} is true if `a`{.language-java} or `b`{.language-java} (or both) are true.
+
+`&&`{.language-java} **Logical AND**
+> `a && b`{.language-java} is true if (and only if) both `a`{.language-java} and `b`{.language-java} are true
+
+`!`{.language-java} **Logical NOT**
+> `!a`{.language-java} is true if `a`{.language-java} is false
 
 
 ### Loops
