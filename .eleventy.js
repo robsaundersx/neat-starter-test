@@ -4,13 +4,15 @@ const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const markdownItAttrs = require('markdown-it-attrs');
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const prism = require("prismjs");
+const Prism = require("prismjs");
+const PrismLoader = require("prismjs/components/index.js");
 const htmlmin = require("html-minifier");
+
+PrismLoader.silent = true;
 
 module.exports = function (eleventyConfig) {
   // Disable automatic use of your .gitignore
   eleventyConfig.setUseGitIgnore(false);
-
   // Merge data instead of overriding
   eleventyConfig.setDataDeepMerge(true);
 
@@ -44,9 +46,12 @@ module.exports = function (eleventyConfig) {
   markdownLibrary.renderer.rules.code_inline = (tokens, idx, options, env, slf) => {
     const token = tokens[idx];
     let str = tokens[idx].content;
-    let language = "javascript";
+    let language = "java";
+    if ( ! Prism.languages[language] ) {
+      PrismLoader(language);
+    }
     // return "<code" + slf.renderAttrs(token) + ">" + escapeHtml(str) + "</code>";
-    return "<code" + slf.renderAttrs(token) + ">" + prism.highlight(str, prism.languages[language], language) + "</code>";
+    return "<code" + slf.renderAttrs(token) + ">" + Prism.highlight(str, Prism.languages[language], language) + "</code>";
   };
   eleventyConfig.setLibrary("md", markdownLibrary);
 
