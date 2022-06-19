@@ -14,17 +14,13 @@ h3 {
 
 /* Syntax Highlighting*/
 
-ol {
-  @apply list-decimal;
-}
-
 /* Block code */
-pre[class*="language-"] {
+.prose pre[class*="language-"] {
   @apply bg-gray-800;
 }
 
 /* Inline code */
-:not(pre) > code[class*="language-"] {
+.prose :not(pre) > code[class*="language-"] {
   @apply bg-gray-100;
   @apply px-2;
   @apply py-1;
