@@ -395,7 +395,7 @@ And it produces exactly the same pattern:
 
 
 #### Loops in Loops
-When one for loop is embedded inside another, the number of repetitions is multiplied. 
+When one `for`{.language-java} loop is embedded inside another, the number of repetitions is multiplied. Nested loops like this are often used in Processing to draw two-dimensional grids.
 
 The following sketch is an example of using one loop inside another this way:
 ```java
