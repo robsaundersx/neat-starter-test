@@ -96,7 +96,7 @@ line(10, 90, 70, 20);
 
 <p><code class="language-java">line(10, 90, 70, 20);<c/code></p>
 
-<code class="language-java">line(10, 90, 70, 20);<c/code>
+<code class="language-java">line(10, 90, 70, 20);</code>
 
 <script>
   const line_sketch = p => {
