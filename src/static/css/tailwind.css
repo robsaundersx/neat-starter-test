@@ -14,18 +14,19 @@ h3 {
 
 /* Syntax Highlighting*/
 
-body ol {
+ol {
   @apply list-decimal;
 }
 
 /* Block code */
-body pre[class*="language-"] {
+pre[class*="language-"] {
   @apply bg-gray-800;
 }
 
 /* Inline code */
-body :not(pre) > code[class*="language-"] {
+:not(pre) > code[class*="language-"] {
   @apply bg-gray-100;
   @apply px-2;
   @apply py-1;
+  white-space: normal;
 }
