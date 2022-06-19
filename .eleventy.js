@@ -54,7 +54,7 @@ module.exports = function (eleventyConfig) {
     }
     let tokenClass = token.attrs[i];
     let regexpLanguage = /language-([a-z]+)/gi;
-    let match = regexpLanguage.exec(classAttr);
+    let match = regexpLanguage.exec(tokenClass);
     if (!match) {
       // return "<code" + slf.renderAttrs(token) + ">" + markdownLibrary.escapeHtml(str) + "</code>";
       return "<code" + slf.renderAttrs(token) + ">" + str + "</code>";
