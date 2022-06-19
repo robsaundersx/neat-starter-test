@@ -46,12 +46,23 @@ module.exports = function (eleventyConfig) {
   markdownLibrary.renderer.rules.code_inline = (tokens, idx, options, env, slf) => {
     const token = tokens[idx];
     let str = tokens[idx].content;
-    let language = "java";
+    let i = token.attrIndex("class");
+    let language = "";
+    if (i < 0) {
+      return "<code" + slf.renderAttrs(token) + ">" + escapeHtml(str) + "</code>";
+    }
+    let tokenClass = token.attrs[i];
+    let regexpLanguage = /language-([a-z]+)/gi;
+    let match = regexpLanguage.exec(classAttr);
+    if (!match) {
+      return "<code" + slf.renderAttrs(token) + ">" + escapeHtml(str) + "</code>";
+    }
+    language = match[1];
     if ( ! Prism.languages[language] ) {
       PrismLoader(language);
     }
-    // return "<code" + slf.renderAttrs(token) + ">" + escapeHtml(str) + "</code>";
-    return "<code" + slf.renderAttrs(token) + ">" + Prism.highlight(str, Prism.languages[language], language) + "</code>";
+    let highlighted = Prism.highlight(str, Prism.languages[language], language) || escapeHtml(str);
+    return "<code" + slf.renderAttrs(token) + ">" + highlighted + "</code>";
   };
   eleventyConfig.setLibrary("md", markdownLibrary);
 
