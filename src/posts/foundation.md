@@ -87,7 +87,9 @@ createCanvas(200, 200);
 Functions are the basic building blocks of a Processing program. The behaviour of a function is defined by its parameters, a set of arguments enclosed in parentheses. Processing includes a collection of functions to draw basic shapes. For example, to draw a single line, we need four parameters: two for the starting location and two for the end.
 
 <div id="line_sketch_container">
+
 `line(10, 90, 70, 20)`{.language-java}
+
 </div>
 
 <script>
@@ -117,7 +119,9 @@ Functions are the basic building blocks of a Processing program. The behaviour o
 </script>
 
 <div id="rect_sketch_container"></div>
+
 `rect(30, 20, 50, 60)`{.language-java}
+
 <script>
   const rect_sketch = p => {
     p.setup = function() {
@@ -130,7 +134,7 @@ Functions are the basic building blocks of a Processing program. The behaviour o
 </script>
 
 <div id="ellipse_sketch_container"></div>
-<p><code>ellipse(50, 40, 60, 50)</code></p>
+`ellipse(50, 40, 60, 50)`{.language-java}
 <script>
   const ellipse_sketch = p => {
     p.setup = function() {
