@@ -225,7 +225,7 @@ int x = 12; // Declare x as an int variable and assign a value
 
 The most common Processing data types:
 
-                Data Type | Example Usage                            | Usage Description
+Data Type                 | Example Usage                            | Usage Description
 -------------------------:|:-----------------------------------------|:----------------------------------
 `int`{.language-java}     | `int number = 2;`{.language-java}        | An integer (whole number).
 `float`{.language-java}   | `float number = 3.14;`{.language-java}   | A floating-point (decimal) number.
@@ -239,9 +239,9 @@ In addition to the above data types, which all come from the Java programming la
 > TODO: Statements
 
 ### Conditionals
-A conditional checks that a condition has been met before executing a code block. The code between the curly braces `{` `}` is called a code block, and is something that you will see a lot in Processing.
+A conditional checks that a condition has been met before executing a code block. The code between the curly braces `{`{.language-java} `}`{.language-java} is called a code block, and is something that you will see a lot in Processing.
 
-In the following code, the conditional tests whether the value of `diam` is less than or equal to 400. If it is, the code block (inside the curly braces) executes. If not, the code block is skipped:
+In the following code, the conditional tests whether the value of `diam`{.language-java} is less than or equal to 400. If it is, the code block (inside the curly braces) executes. If not, the code block is skipped:
 
 ```java
 // check a condition
@@ -253,14 +253,14 @@ if (diam <= 400) {
 
 The conditional statement can be expressed as a comparison between two values with a relational operator. Relational operators inclulde:
 
-Operator | Example Usage | Description
---: | ---- | ----
-`>` | `a > b` | Greater than
-`<` | `a < b` | Less than
-`>=` | `a >= b` | Greater than or equal to
-`<=` | `a <= b` | Less than or equal to
-`==` | `a == b` | Equal to
-`!=` | `a != b` | Not equal to
+Operator                 | Example Usage            | Description
+-----------------------: | :----------------------- | :-----------------------
+     `>`{.language-java} | `a > b`{.language-java}  | Greater than
+     `<`{.language-java} | `a < b`{.language-java}  | Less than
+    `>=`{.language-java} | `a >= b`{.language-java} | Greater than or equal to
+    `<=`{.language-java} | `a <= b`{.language-java} | Less than or equal to
+    `==`{.language-java} | `a == b`{.language-java} | Equal to
+    `!=`{.language-java} | `a != b`{.language-java} | Not equal to
 
 You can also use an `else` clause as part of a conditional statement, which provides a block of code to be executed if the condition isn't met:
 
