@@ -47,7 +47,7 @@ module.exports = function (eleventyConfig) {
   // //   }),
   // //   slugify: eleventyConfig.getFilter("slug")
   // // })
-  // eleventyConfig.setLibrary("md", markdownLibrary);
+  eleventyConfig.setLibrary("md", markdownLibrary);
 
   // Copy Static Files to /_Site
   eleventyConfig.addPassthroughCopy({
