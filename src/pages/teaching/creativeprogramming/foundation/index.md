@@ -1,5 +1,5 @@
 ---
-title: Foundation - Creative Programming
+title: Foundation
 description: Foundation is the first topic in the Creative Programmin course.
 author: Rob Saunders
 date: 2022-06-20
