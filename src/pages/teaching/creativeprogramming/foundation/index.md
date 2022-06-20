@@ -7,6 +7,6 @@ tags:
   - Creative Programming
 ---
 
-1. [Introduction](introduction.html)
-2. [Java](java.html)
-3. [Drawing](drawing.html)
+1. [Introduction](./introduction/)
+2. [Java](./java/)
+3. [Drawing](./drawing/)
