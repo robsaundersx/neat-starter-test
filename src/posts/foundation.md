@@ -467,7 +467,7 @@ let rgb_sketch1_instance = new p5(rgb_sketch1, "rgb_sketch1_container");
 
 Specifying RGB values often isn’t very intuitive, so to choose colours, you can use _Color Selector_ tool, by selecting `Tools > Color Selector` from the menu.
 
-==Figure: Color Selector==
+Figure: Color Selector {.text-orange-500}
 
 The transparency of colours can be controlled by adding an additional parameter. By default, this parameter also takes a value between `0`{.language-java} and `255`{.language-java}: a value of `0`{.language-java} defines the colour as entirely transparent (it won’t display), a value of `255`{.language-java} is entirely opaque. Values between these extremes allow previously drawn colours to show through to some extent.
 
