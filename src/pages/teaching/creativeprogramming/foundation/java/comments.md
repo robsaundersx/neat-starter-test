@@ -7,7 +7,6 @@ tags:
   - Creative Programming
 ---
 
-### Comments
 Comments are parts of the program that are ignored when the program is run. They are useful for making notes for yourself that explain what's happening in the code. If others are reading your code, comments are especially important to help them understand your thought process. Comments are also useful for trying things in your code without loosing the original attempt.
 
 ```java

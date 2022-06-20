@@ -7,7 +7,7 @@ tags:
   - Creative Programming
 ---
 
-## Drawing
+Processing was originally developed as a programming environment for drawing with code and this shows in the ease with which sketches can be programmed to generate visual designs. In this section we will take a brief tour of the basics of drawing with Processing.
 
 ### The Coordinate System
 Often, the first line of a simple Processing sketch contains a call to the function `size(200, 200)`{.language-java}, which in Processing creates a _display window_ of with the given dimensions in pixels:  
