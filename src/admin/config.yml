@@ -33,6 +33,9 @@ collections:
   - label: "Pages"
     name: "pages"
     folder: "src/pages"
+    nested:
+      depth: 100
+      summary: '{{title}}'
     create: true
     editor:
       preview: false
