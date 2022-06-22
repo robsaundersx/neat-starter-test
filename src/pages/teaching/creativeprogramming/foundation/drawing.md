@@ -40,7 +40,7 @@ Functions are the basic building blocks of a Processing program. The behaviour o
 
   const rect_sketch = new p5( p => { p.setup = () => { p.createCanvas(100, 100); p.background(223); p.rect(30, 20, 50, 60); }; }, "rect_sketch_container");
 
-  const ellipse_sketch = new p5( p => { p.setup = () => { p.createCanvas(100, 100); p.background(223); p.ellipse(50, 40, 60, 50); }, "ellipse_sketch_container");
+  const ellipse_sketch = new p5( p => { p.setup = () => { p.createCanvas(100, 100); p.background(223); p.ellipse(50, 40, 60, 50); }; }, "ellipse_sketch_container");
 </script>
 
 ### Drawing Order
