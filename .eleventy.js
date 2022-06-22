@@ -50,7 +50,7 @@ module.exports = function (eleventyConfig) {
     const token = tokens[idx];
     let str = tokens[idx].content;
     let tokenClassIndex = token.attrIndex("class");
-    if (tokenClassIndex < 0) {
+    if (tokenClassIndex >= 0) {
       let tokenClass = token.attrs[tokenClassIndex];
       let regexpLanguage = /language-([a-z]+)/gi;
       let match = regexpLanguage.exec(tokenClass);
