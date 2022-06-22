@@ -23,14 +23,15 @@ createCanvas(200, 200);
 ### Drawing Functions
 Functions are the basic building blocks of a Processing program. The behaviour of a function is defined by its parameters, a set of arguments enclosed in parentheses. Processing includes a collection of functions to draw basic shapes. For example, to draw a single line, we need four parameters: two for the starting location and two for the end.
 
-<div class="flex flex-col gap-4">
-  <div class="flex flex-row gap-4">
-
-{#line_sketch_container .m-0}
-
 `line(10, 90, 70, 20)`{.language-java} {.m-0}
 
+The `line(x1, y1, x2, y2)`{.language-java} function takes four parameters, specifying the start and end coordinates of the line.{#line_sketch_container .float-left}
+
 <script>new p5( p => { p.setup = () => { p.createCanvas(100, 100); p.background(223); p.line(10, 90, 70, 20); }; }, "line_sketch_container");</script>
+
+
+<div class="flex flex-col gap-4">
+  <div class="flex flex-row gap-4">
 
   </div><div class="flex flex-row gap-4">
 
