@@ -25,7 +25,7 @@ Functions are the basic building blocks of a Processing program. The behaviour o
 
 <div class="grid grid-cols-2 gap-4 place-content-start">
   
-{#line_sketch_container .border-rounded .w-[100px] .h-[100px]}
+{#line_sketch_container .border-rounded .max-w-[100px] .max-h-[100px]}
 
 `line(10, 90, 70, 20)`{.language-java}
 
