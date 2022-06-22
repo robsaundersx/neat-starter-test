@@ -37,14 +37,9 @@ Functions are the basic building blocks of a Processing program. The behaviour o
 </table>
 
 <script>
-  const line_sketch = p => {
-    p.setup = function() {
-      p.createCanvas(100, 100);
-      p.background(255 - 32);
-      p.line(10, 90, 70, 20);
-    };
-  };
-  new p5(line_sketch, "line_sketch_container_in_table");
+  new p5( (p) => {
+    p.setup = function() { p.createCanvas(100, 100); p.background(255 - 32); p.line(10, 90, 70, 20); };
+  }, "line_sketch_container_in_table");
 </script>
 
 <script>

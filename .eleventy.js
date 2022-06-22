@@ -56,9 +56,10 @@ module.exports = function (eleventyConfig) {
       let match = regexpLanguage.exec(tokenClass);
       if (match) {
         let language = match[1];
-        if ( ! Prism.languages[language] ) { PrismLoader(language); }
+        // if ( ! Prism.languages[language] ) { PrismLoader(language); }
         // let highlighted = Prism.highlight(str, Prism.languages[language], language) || markdownLibrary.escapeHtml(str);
-        let highlighted = Prism.highlight(str, Prism.languages[language], language);
+        // let highlighted = Prism.highlight(str, Prism.languages[language], language);
+        let highlighted = this.highlight(language, str);
         return "<code" + slf.renderAttrs(token) + ">" + highlighted + "</code>";
       }
     }
