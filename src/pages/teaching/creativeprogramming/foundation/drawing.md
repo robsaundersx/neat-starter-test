@@ -34,17 +34,13 @@ Functions are the basic building blocks of a Processing program. The behaviour o
 `ellipse(50, 40, 60, 50)`{.language-java} {#ellipse_sketch_container}
 
 <script>
-  const line_sketch = new p5(p => {
-    p.setup = () => {
-      p.createCanvas(100, 100);
-      p.background(223);
-      p.line(10, 90, 70, 20);
-    };
-  }, "line_sketch_container");
+  const line_sketch = new p5( p => { p.setup = () => { p.createCanvas(100, 100); p.background(223); p.line(10, 90, 70, 20); }; }, "line_sketch_container");
 
-  // new p5( (p) => { p.setup = function() { p.createCanvas(100, 100); p.background(223); p.triangle(10, 90, 70, 80, 30, 10); }; }, "triangle_sketch_container");
-  // new p5( (p) => { p.setup = function() { p.createCanvas(100, 100); p.background(223); p.rect(30, 20, 50, 60); }; }, "rect_sketch_container");
-  // new p5( (p) => { p.setup = function() { p.createCanvas(100, 100); p.background(223); p.ellipse(50, 40, 60, 50); }, "ellipse_sketch_container");
+  const triangle_sketch = new p5( p => { p.setup = () => { p.createCanvas(100, 100); p.background(223); p.triangle(10, 90, 70, 80, 30, 10); }; }, "triangle_sketch_container");
+
+  const rect_sketch = new p5( p => { p.setup = () => { p.createCanvas(100, 100); p.background(223); p.rect(30, 20, 50, 60); }; }, "rect_sketch_container");
+
+  const ellipse_sketch = new p5( p => { p.setup = () => { p.createCanvas(100, 100); p.background(223); p.ellipse(50, 40, 60, 50); }, "ellipse_sketch_container");
 </script>
 
 ### Drawing Order
