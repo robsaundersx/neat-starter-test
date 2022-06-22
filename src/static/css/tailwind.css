@@ -33,3 +33,7 @@ dt {
 dd {
   @apply ml-6;
 }
+
+.p5Canvas {
+  @apply rounded;
+}
