@@ -24,42 +24,40 @@ createCanvas(200, 200);
 Functions are the basic building blocks of a Processing program. The behaviour of a function is defined by its parameters, a set of arguments enclosed in parentheses. Processing includes a collection of functions to draw basic shapes. For example, to draw a single line, we need four parameters: two for the starting location and two for the end.
 
 <div class="flex flex-col gap-4">
-  <div class="flex flex-row gap-4 place-content-start">
+  <div class="flex flex-row gap-4">
 
-{#line_sketch_container .rounded .w-[100px] .h-[100px] .m-0}
+{#line_sketch_container .m-0}
 
 `line(10, 90, 70, 20)`{.language-java} {.m-0}
 
-  </div><div class="flex flex-row gap-4 place-content-start">
+<script>new p5( p => { p.setup = () => { p.createCanvas(100, 100); p.background(223); p.line(10, 90, 70, 20); }; }, "line_sketch_container");</script>
 
-{#triangle_sketch_container .rounded .w-[100px] .h-[100px] .m-0}
+  </div><div class="flex flex-row gap-4">
+
+{#triangle_sketch_container .m-0}
 
 `triangle(10, 90, 70, 80, 30, 10)`{.language-java} {.m-0}
 
-  </div><div class="flex flex-row gap-4 place-content-start">
+<script>new p5( p => { p.setup = () => { p.createCanvas(100, 100); p.background(223); p.triangle(10, 90, 70, 80, 30, 10); }; }, "triangle_sketch_container");</script>
 
-{#rect_sketch_container .rounded}
+  </div><div class="flex flex-row gap-4">
+
+{#rect_sketch_container .rounded .m-0}
 
 `rect(30, 20, 50, 60)`{.language-java} {.m-0}
 
-  </div><div class="flex flex-row gap-4 place-content-start">
+<script>new p5( p => { p.setup = () => { p.createCanvas(100, 100); p.background(223); p.rect(30, 20, 50, 60); }; }, "rect_sketch_container");</script>
 
-{#ellipse_sketch_container .rounded}
+  </div><div class="flex flex-row gap-4">
+
+{#ellipse_sketch_container .rounded .m-0}
 
 `ellipse(50, 40, 60, 50)`{.language-java} {.m-0}
 
+<script>new p5( p => { p.setup = () => { p.createCanvas(100, 100); p.background(223); p.ellipse(50, 40, 60, 50); }; }, "ellipse_sketch_container");</script>
+
   </div>
 </div>
-
-<script>
-  new p5( p => { p.setup = () => { p.createCanvas(100, 100); p.background(223); p.line(10, 90, 70, 20); }; }, "line_sketch_container");
-
-  new p5( p => { p.setup = () => { p.createCanvas(100, 100); p.background(223); p.triangle(10, 90, 70, 80, 30, 10); }; }, "triangle_sketch_container");
-
-  new p5( p => { p.setup = () => { p.createCanvas(100, 100); p.background(223); p.rect(30, 20, 50, 60); }; }, "rect_sketch_container");
-
-  new p5( p => { p.setup = () => { p.createCanvas(100, 100); p.background(223); p.ellipse(50, 40, 60, 50); }; }, "ellipse_sketch_container");
-</script>
 
 ### Drawing Order
 When a program runs, the computer starts at the top and reads each line of code until it reaches the last line and then stops. If you want a shape to be drawn on top of all other shapes, it needs to follow the others in the code.
