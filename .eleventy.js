@@ -57,8 +57,8 @@ module.exports = function (eleventyConfig) {
       if (match) {
         let language = match[1];
         if ( ! Prism.languages[language] ) { PrismLoader(language); }
-        // let highlighted = Prism.highlight(str, Prism.languages[language], language) || markdownLibrary.escapeHtml(str);
-        let highlighted = Prism.highlight(str, Prism.languages[language], language);
+        let highlighted = Prism.highlight(str, Prism.languages[language], language) || renderer.escapeHtml(str);
+        // let highlighted = Prism.highlight(str, Prism.languages[language], language);
         return "<code" + slf.renderAttrs(token) + ">" + highlighted + "</code>";
       }
     }
