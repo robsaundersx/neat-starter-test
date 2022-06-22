@@ -26,11 +26,11 @@ Functions are the basic building blocks of a Processing program. The behaviour o
 <div class="flex">
   <div class="grid grid-cols-2 gap-4 place-content-start">
 
-<div id="line_sketch_container" class="rounded max-w-[100px] max-h-[100px]"></div>
+<div id="line_sketch_container" class="rounded w-[100px] h-[100px]"></div>
 
 `line(10, 90, 70, 20)`{.language-java}
 
-{#triangle_sketch_container .rounded .max-w-[100px] .max-h-[100px]}
+{#triangle_sketch_container .rounded .w-[100px] .h-[100px]}
 
 `triangle(10, 90, 70, 80, 30, 10)`{.language-java}
 
