@@ -23,26 +23,26 @@ createCanvas(200, 200);
 ### Drawing Functions
 Functions are the basic building blocks of a Processing program. The behaviour of a function is defined by its parameters, a set of arguments enclosed in parentheses. Processing includes a collection of functions to draw basic shapes. For example, to draw a single line, we need four parameters: two for the starting location and two for the end.
 
-<div class="flex-col gap-4">
-  <div class="flex-row gap-4 place-content-start">
+<div class="flex flex-col gap-4">
+  <div class="flex flex-row gap-4 place-content-start">
 
 <div id="line_sketch_container" class="rounded w-[100px] h-[100px]"></div>
 
 `line(10, 90, 70, 20)`{.language-java}
 
-  </div><div class="flex-row gap-4 place-content-start">
+  </div><div class="flex flex-row gap-4 place-content-start">
 
 {#triangle_sketch_container .rounded .w-[100px] .h-[100px]}
 
 `triangle(10, 90, 70, 80, 30, 10)`{.language-java}
 
-  </div><div class="flex-row gap-4 place-content-start">
+  </div><div class="flex flex-row gap-4 place-content-start">
 
 {#rect_sketch_container .rounded}
 
 `rect(30, 20, 50, 60)`{.language-java}
 
-  </div><div class="flex-row gap-4 place-content-start">
+  </div><div class="flex flex-row gap-4 place-content-start">
 
 {#ellipse_sketch_container .rounded}
 
