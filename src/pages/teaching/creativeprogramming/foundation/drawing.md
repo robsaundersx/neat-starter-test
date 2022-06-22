@@ -23,7 +23,7 @@ createCanvas(200, 200);
 ### Drawing Functions
 Functions are the basic building blocks of a Processing program. The behaviour of a function is defined by its parameters, a set of arguments enclosed in parentheses. Processing includes a collection of functions to draw basic shapes. For example, to draw a single line, we need four parameters: two for the starting location and two for the end.
 
-<div class="flex col gap-4">
+<div class="flex-col gap-4">
   <div class="flex-row gap-4 place-content-start">
 
 <div id="line_sketch_container" class="rounded w-[100px] h-[100px]"></div>
