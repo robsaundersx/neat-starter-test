@@ -23,85 +23,16 @@ createCanvas(200, 200);
 ### Drawing Functions
 Functions are the basic building blocks of a Processing program. The behaviour of a function is defined by its parameters, a set of arguments enclosed in parentheses. Processing includes a collection of functions to draw basic shapes. For example, to draw a single line, we need four parameters: two for the starting location and two for the end.
 
-<span id="line_sketch_container_in_table"></span> `line(10, 90, 70, 20)`{.language-java}
-<span id="triangle_sketch_container_in_table"></span> `triangle(10, 90, 70, 80, 30, 10)`{.language-java}
+<span id="line_sketch_container"></span> `line(10, 90, 70, 20)`{.language-java}
+<span id="triangle_sketch_container"></span> `triangle(10, 90, 70, 80, 30, 10)`{.language-java}
+<span id="rect_sketch_container"></span> `rect(30, 20, 50, 60)`{.language-java}
+<span id="ellipse_sketch_container"></span> `ellipse(50, 40, 60, 50)`{.language-java}
 
 <script>
-  new p5( (p) => {
-    p.setup = function() { p.createCanvas(100, 100); p.background(255 - 32); p.line(10, 90, 70, 20); };
-  }, "line_sketch_container_in_table");
-</script>
-
-<script>
-  const triangle_sketch = p => {
-    p.setup = function() {
-      p.createCanvas(100, 100);
-      p.background(255 - 32);
-      p.triangle(10, 90, 70, 80, 30, 10);
-    };
-  };
-  new p5(triangle_sketch, "triangle_sketch_container_in_table");
-</script>
-
-
-<div id="line_sketch_container"></div>
-
-`line(10, 90, 70, 20)`{.language-java}
-
-<script>
-  const line_sketch = p => {
-    p.setup = function() {
-      p.createCanvas(100, 100);
-      p.background(255 - 32);
-      p.line(10, 90, 70, 20);
-    };
-  };
-  new p5(line_sketch, "line_sketch_container");
-</script>
-
-<div id="triangle_sketch_container"></div>
-
-`triangle(10, 90, 70, 80, 30, 10)`{.language-java}
-
-<script>
-  const triangle_sketch = p => {
-    p.setup = function() {
-      p.createCanvas(100, 100);
-      p.background(255 - 32);
-      p.triangle(10, 90, 70, 80, 30, 10);
-    };
-  };
-  new p5(triangle_sketch, "triangle_sketch_container");
-</script>
-
-<div id="rect_sketch_container"></div>
-
-`rect(30, 20, 50, 60)`{.language-java}
-
-<script>
-  const rect_sketch = p => {
-    p.setup = function() {
-      p.createCanvas(100, 100);
-      p.background(255 - 32);
-      p.rect(30, 20, 50, 60);
-    };
-  };
-  new p5(rect_sketch, "rect_sketch_container");
-</script>
-
-<div id="ellipse_sketch_container"></div>
-
-`ellipse(50, 40, 60, 50)`{.language-java}
-
-<script>
-  const ellipse_sketch = p => {
-    p.setup = function() {
-      p.createCanvas(100, 100);
-      p.background(255 - 32);
-      p.ellipse(50, 40, 60, 50);
-    };
-  };
-  new p5(ellipse_sketch, "ellipse_sketch_container");
+  new p5( (p) => { p.setup = function() { p.createCanvas(100, 100); p.background(223); p.line(10, 90, 70, 20); }; }, "line_sketch_container");
+  new p5( (p) => { p.setup = function() { p.createCanvas(100, 100); p.background(223); p.triangle(10, 90, 70, 80, 30, 10); }; }, "triangle_sketch_container");
+  new p5( (p) => { p.setup = function() { p.createCanvas(100, 100); p.background(223); p.rect(30, 20, 50, 60); }; }, "rect_sketch_container");
+  new p5( (p) => { p.setup = function() { p.createCanvas(100, 100); p.background(223); p.ellipse(50, 40, 60, 50); }, "ellipse_sketch_container");
 </script>
 
 ### Drawing Order
