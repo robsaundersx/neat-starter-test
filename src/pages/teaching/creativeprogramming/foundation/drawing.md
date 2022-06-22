@@ -25,21 +25,21 @@ Functions are the basic building blocks of a Processing program. The behaviour o
 
 <div class="flex justify-start gap-4">
   
-{#line_sketch_container}
+{#line_sketch_container .flex-none}
 
-`line(10, 90, 70, 20)`{.language-java}
+`line(10, 90, 70, 20)`{.language-java} {.flex-none}
 
-{#triangle_sketch_container}
+{#triangle_sketch_container .flex-none}
 
-`triangle(10, 90, 70, 80, 30, 10)`{.language-java}
+`triangle(10, 90, 70, 80, 30, 10)`{.language-java} {.flex-none}
 
-{#rect_sketch_container}
+{#rect_sketch_container .flex-none}
 
-`rect(30, 20, 50, 60)`{.language-java}
+`rect(30, 20, 50, 60)`{.language-java} {.flex-none}
 
-{#ellipse_sketch_container}
+{#ellipse_sketch_container .flex-none}
 
-`ellipse(50, 40, 60, 50)`{.language-java}
+`ellipse(50, 40, 60, 50)`{.language-java} {.flex-none}
 
 </div>
 
