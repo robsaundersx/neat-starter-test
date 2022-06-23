@@ -47,7 +47,7 @@ The `triangle(x1, y1, x2, y2, x3, y3)`{.language-java} function takes six parame
 
 The `quad(x1, y1, x2, y2, x3, y3, x4, y4)`{.language-java} function takes eight parameters, specifying the corner coordinates of the quad, e.g., `quad(10, 90, 70, 80, 90, 30, 30, 10)`{.language-java}
 
-<script>new p5( p => { p.setup = () => { p.createCanvas(100, 100); p.background(223); p.quad(10, 90, 70, 80, 90, 30, 30, 10); }; }, "triangle_sketch_container");</script>
+<script>new p5( p => { p.setup = () => { p.createCanvas(100, 100); p.background(223); p.quad(10, 90, 70, 80, 90, 30, 30, 10); }; }, "quad_sketch_container");</script>
 
   </div><div class="flex flex-row gap-4">
 
