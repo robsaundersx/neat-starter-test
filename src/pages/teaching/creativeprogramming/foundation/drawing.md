@@ -31,21 +31,19 @@ Functions are the basic building blocks of a Processing program. The behaviour o
 
 {#line_sketch_container}
 
-The `line(x1, y1, x2, y2)`{.language-java} function takes four parameters, specifying the start and end coordinates of the line, e.g., `line(10, 90, 70, 20)`{.language-java}
+The `line(x1, y1, x2, y2)`{.language-java} function takes four parameters, specifying the start (`x1`{.language-java}, `y1`{.language-java}) and end (`x2`{.language-java}, `y2`{.language-java}) coordinates of the line, e.g., `line(10, 90, 70, 20)`{.language-java}
 
   </div><div class="flex flex-row gap-4">
 
-{#triangle_sketch_container .m-0}
+{#triangle_sketch_container}
 
-`triangle(10, 90, 70, 80, 30, 10)`{.language-java} {.m-0}
+The `triangle(x1, y1, x2, y2, x3, y3)`{.language-java} function takes four parameters, specifying the corner coordinates of the triangle, e.g., `triangle(10, 90, 70, 80, 30, 10)`{.language-java}
 
 <script>new p5( p => { p.setup = () => { p.createCanvas(100, 100); p.background(223); p.triangle(10, 90, 70, 80, 30, 10); }; }, "triangle_sketch_container");</script>
 
   </div><div class="flex flex-row gap-4">
 
-{#rect_sketch_container .rounded .m-0}
-
-`rect(30, 20, 50, 60)`{.language-java} {.m-0}
+{#rect_sketch_container} The `rect(x, y, w, h)` function takes four parameters, by default these specify the top-left corner (`x`{.language-java}, `y`{.language-java}) and width (`w`{.language-java}) and height (`h`{.language-java}), e.g., `rect(30, 20, 50, 60)`{.language-java}
 
 <script>new p5( p => { p.setup = () => { p.createCanvas(100, 100); p.background(223); p.rect(30, 20, 50, 60); }; }, "rect_sketch_container");</script>
 
