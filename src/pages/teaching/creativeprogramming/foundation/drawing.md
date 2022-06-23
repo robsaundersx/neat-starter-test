@@ -43,15 +43,17 @@ The `triangle(x1, y1, x2, y2, x3, y3)`{.language-java} function takes four param
 
   </div><div class="flex flex-row gap-4">
 
-{#rect_sketch_container} The `rect(x, y, w, h)` function takes four parameters, by default these specify the top-left corner (`x`{.language-java}, `y`{.language-java}) and width (`w`{.language-java}) and height (`h`{.language-java}), e.g., `rect(30, 20, 50, 60)`{.language-java}
+{#rect_sketch_container}
+
+The `rect(x, y, w, h)` function takes four parameters, by default these specify the top-left corner (`x`{.language-java}, `y`{.language-java}) and width (`w`{.language-java}) and height (`h`{.language-java}), e.g., `rect(30, 20, 50, 60)`{.language-java}
 
 <script>new p5( p => { p.setup = () => { p.createCanvas(100, 100); p.background(223); p.rect(30, 20, 50, 60); }; }, "rect_sketch_container");</script>
 
   </div><div class="flex flex-row gap-4">
 
-{#ellipse_sketch_container .rounded .m-0}
+{#ellipse_sketch_container}
 
-`ellipse(50, 40, 60, 50)`{.language-java} {.m-0}
+The `ellipse(x, y, w, h)` function takes four parameters, by default these specify the center (`x`{.language-java}, `y`{.language-java}) and width (`w`{.language-java}) and height (`h`{.language-java}), e.g., `ellipse(50, 40, 60, 50)`{.language-java}
 
 <script>new p5( p => { p.setup = () => { p.createCanvas(100, 100); p.background(223); p.ellipse(50, 40, 60, 50); }; }, "ellipse_sketch_container");</script>
 
