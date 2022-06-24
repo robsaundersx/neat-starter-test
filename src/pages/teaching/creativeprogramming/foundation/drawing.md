@@ -186,9 +186,12 @@ From the examples above, you can observe that the curves are drawn such that the
 ::: flex flex-row gap-4
 
 ::: flex flex-col gap-4
-{#arc_construction_sketch1}
 
-{#arc_construction_sketch2}
+::: #arc_construction_sketch1
+:::
+
+::: #arc_construction_sketch2
+:::
 
 :::
 
