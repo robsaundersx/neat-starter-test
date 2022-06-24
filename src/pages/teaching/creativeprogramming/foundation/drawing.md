@@ -248,6 +248,6 @@ rect(20, 20, 40, 60);
   new p5(order_sketch2, "order_sketch2_container");
 </script>
 
-### Drawing Modes
+### Drawing Modes {#drawing-modes}
 
-### Drawing Styles
+### Drawing Styles {#drawing-styles}
