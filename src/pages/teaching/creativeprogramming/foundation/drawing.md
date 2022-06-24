@@ -232,6 +232,25 @@ We can better understand how arcs are constructed with the `arc()`{.language-jav
 </script>
 :::
 
+::: flex flex-row gap-4
+{#beziervertex_sketch_container}
+
+<script>
+  new p5(
+    p => {
+      p.setup = () => {
+        p.createCanvas(100, 100);
+        p.background(223);
+        p.beginShape();
+        p.vertex(30, 20);
+        p.bezierVertex(70, 20, 90, 50, 70, 80);
+        p.bezierVertex(30, 80, 10, 50, 30, 20);
+        p.endShape(p.CLOSE);
+      };
+    }, "beziervertex_sketch_container");
+</script>
+:::
+
 ### Drawing Order
 When a program runs, the computer starts at the top and reads each line of code until it reaches the last line and then stops. If you want a shape to be drawn on top of all other shapes, it needs to follow the others in the code.
 
