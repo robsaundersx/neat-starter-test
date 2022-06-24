@@ -154,11 +154,11 @@ From the examples above, you can observe that the curves are drawn such that the
           p.strokeWeight(2);
           p.push();
             p.stroke(0, 192, 0, 48);
-            p.line(10, 90, 70, 80);
+            p.curve(10, 90, 10, 90, 70, 80, 70, 80);
           p.pop();
           p.push();
             p.stroke(192, 0, 0, 48);
-            p.line(90, 30, 30, 10);
+            p.curve(90, 30, 90, 30, 30, 10, 30, 10);
           p.pop();
           p.strokeWeight(4);
           p.stroke(0, 192, 0, 48);
