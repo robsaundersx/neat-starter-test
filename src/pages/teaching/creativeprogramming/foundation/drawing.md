@@ -187,7 +187,7 @@ From the examples above, you can observe that the curves are drawn such that the
 
 {#arc_construction_sketches .flex .flex-col .gap-4}
 
-To better understand the `arc()`{.language-java} function we can draw the ellipse described by the first four coordinates (`x`{.language-java}, `y`{.language-java}, `w`{.language-java}, `h`{.language-java}). This sketch does just that (drawn in blue) together with lines that show the start and stop angles.
+To better understand the `arc()`{.language-java} function we can draw the ellipse described by the first four coordinates (`x`{.language-java}, `y`{.language-java}, `w`{.language-java}, `h`{.language-java}). These sketches show the ellipse (blue) together with lines to indicate the start (green) and stop (red) angles. The first sketch illustrates the output of `arc(50, 40, 60, 50, HALF_PI, PI)`{.language-java} and the second sketch illustrates the output of `arc(50, 40, 60, 50, -PI/4, 3 * PI/5)`{.language-java}.
 <script>
   new p5(
     p => {
@@ -200,16 +200,15 @@ To better understand the `arc()`{.language-java} function we can draw the ellips
           p.strokeWeight(2);
           p.stroke(0, 0, 192, 48);
           p.ellipse(50, 40, 60, 50);
+          p.translate(50, 40);
           p.push();
-            p.stroke(0, 192, 0, 48);
-            p.translate(50, 40);
             p.rotate(p.HALF_PI);
+            p.stroke(0, 192, 0, 48);
             p.line(0, 0, 50, 0);
           p.pop();
           p.push();
-            p.stroke(192, 0, 0, 48);
-            p.translate(50, 40);
             p.rotate(p.PI);
+            p.stroke(192, 0, 0, 48);
             p.line(0, 0, 50, 0);
           p.pop();
           p.strokeWeight(4);
@@ -224,22 +223,21 @@ To better understand the `arc()`{.language-java} function we can draw the ellips
       p.setup = () => {
         p.createCanvas(100, 100);
         p.background(223);
-        p.arc(50, 40, 60, 50, p.PI/4, 3 * p.PI/5);
+        p.arc(50, 50, 40, 40, -p.PI/4, 3 * p.PI/5);
         p.push();
           p.noFill();
           p.strokeWeight(2);
           p.stroke(0, 0, 192, 48);
-          p.ellipse(50, 40, 60, 50);
+          p.ellipse(50, 50, 40, 40);
+          p.translate(50, 50);
           p.push();
+            p.rotate(-p.PI/4);
             p.stroke(0, 192, 0, 48);
-            p.translate(50, 40);
-            p.rotate(p.PI/4);
             p.line(0, 0, 50, 0);
           p.pop();
           p.push();
-            p.stroke(192, 0, 0, 48);
-            p.translate(50, 40);
             p.rotate(3 * p.PI/5);
+            p.stroke(192, 0, 0, 48);
             p.line(0, 0, 50, 0);
           p.pop();
           p.strokeWeight(4);
