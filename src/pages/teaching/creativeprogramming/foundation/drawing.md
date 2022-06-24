@@ -112,25 +112,25 @@ From the examples above, you can observe that the curves are drawn such that the
       p.setup = () => {
         p.createCanvas(100, 100);
         p.background(223);
+        p.arc(50, 40, 60, 50, p.HALF_PI, p.PI);
         p.push();
         p.noFill();
         p.strokeWeight(2);
-        p.stroke(0, 0, 255, 128);
+        p.stroke(0, 0, 255, 32);
         p.ellipse(50, 40, 60, 50);
         p.push();
-        p.stroke(0, 255, 0, 128);
+        p.stroke(0, 255, 0, 32);
         p.translate(50, 40);
         p.rotate(p.HALF_PI);
         p.line(0, 0, 50, 0);
         p.pop();
         p.push();
-        p.stroke(255, 0, 0, 128);
+        p.stroke(255, 0, 0, 32);
         p.translate(50, 40);
         p.rotate(p.PI);
         p.line(0, 0, 50, 0);
         p.pop();
         p.pop();
-        p.arc(50, 40, 60, 50, p.HALF_PI, p.PI);
       };
     }, "arc_construction_sketch_container");
 </script>
