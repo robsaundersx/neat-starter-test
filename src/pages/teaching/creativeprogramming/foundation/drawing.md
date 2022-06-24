@@ -209,6 +209,28 @@ From the examples above, you can observe that the curves are drawn such that the
 
 #### Vertices
 
+::: flex flex-row gap-4
+{#vertex_stetch_container}
+
+<script>
+  new p5(
+    p => {
+      p.setup = () => {
+        p.createCanvas(100, 100);
+        p.background(223);
+        p.beginShape();
+        p.vertex(30, 20);
+        p.vertex(70, 20);
+        p.vertex(10, 50);
+        p.vertex(90, 50);
+        p.vertex(30, 80);
+        p.vertex(70, 80);
+        p.endShape();
+      };
+    }, "vertex_sketch_container");
+</script>
+:::
+
 ### Drawing Order
 When a program runs, the computer starts at the top and reads each line of code until it reaches the last line and then stops. If you want a shape to be drawn on top of all other shapes, it needs to follow the others in the code.
 
