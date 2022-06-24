@@ -418,7 +418,7 @@ To better understand the `arc()`{.language-java} function we can draw the ellips
 When a program runs, the computer starts at the top and reads each line of code until it reaches the last line and then stops. If you want a shape to be drawn on top of all other shapes, it needs to follow the others in the code.
 
 ::: flex flex-row gap-4 w-full
-{#order_sketches}
+{#order_sketches .flex .flex-col .gap-4}
 
 ::: w-full
 
