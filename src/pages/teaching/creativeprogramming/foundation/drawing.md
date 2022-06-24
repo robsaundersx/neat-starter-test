@@ -63,7 +63,7 @@ The `ellipse(x, y, w, h)`{.language-java} function takes four parameters, by def
 ::: flex flex-row gap-4
 {#arc_sketch_container}
 
-The `arc(x, y, w, h, a1, a2)`{.language-java} function takes four parameters, specifying the centre coordinate (`x`{.language-java}, `y`{.language-java}), the width (`w`{.language-java}) and height (`h`{.language-java}), and the start (`a1`{.language-java}) and stop (`a2`{.language-java}) angles (in radians) for an arc, e.g., `arc(50, 40, 60, 50, 0, PI)`{.language-java}
+The `arc(x, y, w, h, a1, a2)`{.language-java} function takes four parameters, specifying the centre coordinate (`x`{.language-java}, `y`{.language-java}), the width (`w`{.language-java}) and height (`h`{.language-java}), and the start (`a1`{.language-java}) and stop (`a2`{.language-java}) angles (in radians) for an arc, e.g., `arc(50, 40, 60, 50, HALF_PI, PI)`{.language-java}
 <script>new p5( p => { p.setup = () => { p.createCanvas(100, 100); p.background(223); p.arc(50, 40, 60, 50, p.HALF_PI, p.PI); }; }, "arc_sketch_container");</script>
 :::
 
@@ -73,6 +73,14 @@ The `arc(x, y, w, h, a1, a2)`{.language-java} function takes four parameters, sp
 The `curve(x1, y1, x2, y2, x3, y3, x4, y4)`{.language-java} function takes eight parameters, specifying coordinates that the curve will pass through, e.g., `curve(10, 90, 70, 80, 90, 30, 30, 10)`{.language-java}
 <script>new p5( p => { p.setup = () => { p.createCanvas(100, 100); p.background(223); p.curve(10, 90, 70, 80, 90, 30, 30, 10); }; }, "curve_sketch_container");</script>
 :::
+
+::: flex flex-row gap-4
+{#bezier_sketch_container}
+
+The `bezier(x1, y1, x2, y2, x3, y3, x4, y4)`{.language-java} function takes eight parameters, specifying coordinates of the control points that define the Bezier curve, e.g., `curve(10, 90, 70, 80, 90, 30, 30, 10)`{.language-java}
+<script>new p5( p => { p.setup = () => { p.createCanvas(100, 100); p.background(223); p.bezier(10, 90, 70, 80, 90, 30, 30, 10); }; }, "bezier_sketch_container");</script>
+:::
+
 
 :::
 
