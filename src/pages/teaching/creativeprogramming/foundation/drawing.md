@@ -420,7 +420,7 @@ When a program runs, the computer starts at the top and reads each line of code 
 ::: flex flex-row gap-4 w-full
 {#order_sketch1}
 
-```java
+```java {.w-full}
 rect(20, 20, 40, 60);
 ellipse(60, 50, 30, 30);
 ```
@@ -440,7 +440,7 @@ ellipse(60, 50, 30, 30);
 ::: flex flex-row gap-4 w-full
 {#order_sketch2}
 
-```java
+```java {.w-full}
 ellipse(60, 50, 30, 30);
 rect(20, 20, 40, 60);
 ```
