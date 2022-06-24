@@ -187,7 +187,7 @@ From the examples above, you can observe that the curves are drawn such that the
 
 {#arc_construction_sketches .flex .flex-col .gap-4}
 
-To better understand the `arc()`{.language-java} function we can draw the ellipse described by the first four coordinates (`x`{.language-java}, `y`{.language-java}, `w`{.language-java}, `h`{.language-java}). These sketches show the ellipse (blue) together with lines to indicate the start (green) and stop (red) angles. The first sketch illustrates the output of `arc(50, 40, 60, 50, HALF_PI, PI)`{.language-java} and the second sketch illustrates the output of `arc(50, 40, 60, 50, -PI/4, 3 * PI/5)`{.language-java}.
+To better understand the `arc()`{.language-java} function we can draw the ellipse described by the first four coordinates (`x`{.language-java}, `y`{.language-java}, `w`{.language-java}, `h`{.language-java}). These sketches show the ellipse (blue) together with lines to indicate the start (green) and stop (red) angles. The first sketch illustrates the output of `arc(50, 40, 60, 50, HALF_PI, PI)`{.language-java} and the second sketch illustrates the output of `arc(50, 50, 40, 40, -PI/4, 3 * PI/5)`{.language-java}.
 <script>
   new p5(
     p => {
@@ -250,7 +250,7 @@ To better understand the `arc()`{.language-java} function we can draw the ellips
 :::
 
 ::: flex flex-row gap-4
-{#curve_construction_sketch}
+{#curve_construction_sketches .flex .flex-col .gap-4}
 
 <script>
   new p5(
@@ -279,7 +279,35 @@ To better understand the `arc()`{.language-java} function we can draw the ellips
           p.point(30, 10);
         p.pop();
       };
-    }, "curve_construction_sketch");
+    }, "curve_construction_sketches");
+
+  new p5(
+    p => {
+      p.setup = () => {
+        p.createCanvas(100, 100);
+        p.background(223);
+        p.curve(30, 10, 70, 80, 90, 30, 10, 90);
+        p.push();
+          p.noFill();
+          p.strokeWeight(2);
+          p.push();
+            p.stroke(0, 192, 0, 48);
+            p.curve(30, 10, 30, 10, 70, 80, 90, 30);
+          p.pop();
+          p.push();
+            p.stroke(192, 0, 0, 48);
+            p.curve(70, 80, 90, 30, 10, 90, 10, 90);
+          p.pop();
+          p.strokeWeight(4);
+          p.stroke(0, 192, 0, 48);
+          p.point(30, 10);
+          p.point(70, 80);
+          p.stroke(192, 0, 0, 48);
+          p.point(90, 30);
+          p.point(10, 90);
+        p.pop();
+      };
+    }, "curve_construction_sketches");
 </script>
 :::
 
