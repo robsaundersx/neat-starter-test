@@ -10,7 +10,7 @@ tags:
 Processing was originally developed as a programming environment for drawing with code and this shows in the ease with which sketches can be programmed to generate visual designs. In this section we will take a brief tour of the basics of drawing with Processing.
 
 ### The Coordinate System
-Often, the first line of a simple Processing sketch contains a call to the function `size(200, 200)`{.language-java}, which in Processing creates a _display window_ of with the given dimensions in pixels:  
+Often, the first line of a simple Processing sketch contains a call to the function `size()`{.language-java}, which in Processing creates a _display window_ of with the given dimensions in pixels:  
 ```java
 size(200, 200);
 ```
@@ -99,12 +99,16 @@ The `bezier(x1, y1, x2, y2, x3, y3, x4, y4)`{.language-java} function takes eigh
 
 #### Curves
 
-The `arc()`, `curve()` and `bezier()` drawing functions are worth spending additional time to understand.
+The `arc()`{.language-java}, `curve()`{.language-java} and `bezier()`{.language-java} drawing functions are worth spending additional time to understand.
 
-From the examples above, you can observe that the curves are drawn such that the interior of the curves are filled with a colour. This may not be what you expect but is consistent with the drawing of other shape primitives. You can easily remove the filled interior of these curves by calling the `noFill()` function before drawing them, as we will see below in [Drawing Styles](#drawing-styles).
+From the examples above, you can observe that the curves are drawn such that the interior of the curves are filled with a colour. This may not be what you expect but is consistent with the drawing of other shape primitives. You can easily remove the filled interior of these curves by calling the `noFill()`{.language-java} function before drawing them, as we will see below in [Drawing Styles](#drawing-styles).
 
 ::: flex flex-row gap-4
-{#arc_construction_sketch}
+
+::: flex flex-col gap-4
+{#arc_construction_sketch1}
+
+{#arc_construction_sketch2}
 
 To better understand the `arc()`{.language-java} function we can draw the ellipse described by the first four coordinates (`x`{.language-java}, `y`{.language-java}, `w`{.language-java}, `h`{.language-java}). This sketch does just that (drawn in blue) together with lines that show the start and stop angles.
 <script>
@@ -136,7 +140,38 @@ To better understand the `arc()`{.language-java} function we can draw the ellips
           p.point(50, 40);
         p.pop();
       };
-    }, "arc_construction_sketch");
+    }, "arc_construction_sketch1");
+</script>
+<script>
+  new p5(
+    p => {
+      p.setup = () => {
+        p.createCanvas(100, 100);
+        p.background(223);
+        p.arc(50, 40, 60, 50, p.PI/2, 3 * p.PI/5);
+        p.push();
+          p.noFill();
+          p.strokeWeight(2);
+          p.stroke(0, 0, 192, 48);
+          p.ellipse(50, 40, 60, 50);
+          p.push();
+            p.stroke(0, 192, 0, 48);
+            p.translate(50, 40);
+            p.rotate(p.PI/4);
+            p.line(0, 0, 50, 0);
+          p.pop();
+          p.push();
+            p.stroke(192, 0, 0, 48);
+            p.translate(50, 40);
+            p.rotate(3 * p.PI/5);
+            p.line(0, 0, 50, 0);
+          p.pop();
+          p.strokeWeight(4);
+          p.stroke(0, 0, 192, 48);
+          p.point(50, 40);
+        p.pop();
+      };
+    }, "arc_construction_sketch2");
 </script>
 :::
 
