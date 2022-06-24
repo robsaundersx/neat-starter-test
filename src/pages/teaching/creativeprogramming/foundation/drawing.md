@@ -33,6 +33,8 @@ Functions are the basic building blocks of a Processing program. The behaviour o
 
 The `line(x1, y1, x2, y2)`{.language-java} function takes four parameters, specifying the start (`x1`{.language-java}, `y1`{.language-java}) and end (`x2`{.language-java}, `y2`{.language-java}) coordinates of the line, e.g., `line(10, 90, 70, 20)`{.language-java}
 
+<script>new p5( p => { p.setup = () => { p.createCanvas(100, 100); p.background(223); p.line(10, 90, 70, 20); }; }, "line_sketch_container");</script>
+
   </div><div class="flex flex-row gap-4">
 
 {#triangle_sketch_container}
@@ -67,6 +69,39 @@ The `ellipse(x, y, w, h)`{.language-java} function takes four parameters, by def
 
   </div>
 </div>
+
+::: flex flex-col gap-4
+::: flex flex-row gap-4
+::: #line_sketch_container-1
+:::
+The `line(x1, y1, x2, y2)`{.language-java} function takes four parameters, specifying the start (`x1`{.language-java}, `y1`{.language-java}) and end (`x2`{.language-java}, `y2`{.language-java}) coordinates of the line, e.g., `line(10, 90, 70, 20)`{.language-java}
+<script>new p5( p => { p.setup = () => { p.createCanvas(100, 100); p.background(223); p.line(10, 90, 70, 20); }; }, "line_sketch_container-1");</script>
+:::
+::: flex flex-row gap-4
+::: #triangle_sketch_container-1
+:::
+The `triangle(x1, y1, x2, y2, x3, y3)`{.language-java} function takes six parameters, specifying the corner coordinates of the triangle, e.g., `triangle(10, 90, 70, 80, 30, 10)`{.language-java}
+<script>new p5( p => { p.setup = () => { p.createCanvas(100, 100); p.background(223); p.triangle(10, 90, 70, 80, 30, 10); }; }, "triangle_sketch_container-1");</script>
+:::
+::: flex flex-row gap-4
+::: #quad_sketch_container-1
+:::
+The `quad(x1, y1, x2, y2, x3, y3, x4, y4)`{.language-java} function takes eight parameters, specifying the corner coordinates of the quad, e.g., `quad(10, 90, 70, 80, 90, 30, 30, 10)`{.language-java}
+<script>new p5( p => { p.setup = () => { p.createCanvas(100, 100); p.background(223); p.quad(10, 90, 70, 80, 90, 30, 30, 10); }; }, "quad_sketch_container-1");</script>
+:::
+::: flex flex-row gap-4
+:::#rect_sketch_container-1
+:::
+The `rect(x, y, w, h)`{.language-java} function takes four parameters, by default these specify the top-left corner (`x`{.language-java}, `y`{.language-java}) and width (`w`{.language-java}) and height (`h`{.language-java}), e.g., `rect(30, 20, 50, 60)`{.language-java}
+<script>new p5( p => { p.setup = () => { p.createCanvas(100, 100); p.background(223); p.rect(30, 20, 50, 60); }; }, "rect_sketch_container-1");</script>
+:::
+::: flex flex-row gap-4
+::: #ellipse_sketch_container-1
+:::
+The `ellipse(x, y, w, h)`{.language-java} function takes four parameters, by default these specify the center (`x`{.language-java}, `y`{.language-java}) and width (`w`{.language-java}) and height (`h`{.language-java}), e.g., `ellipse(50, 40, 60, 50)`{.language-java}
+<script>new p5( p => { p.setup = () => { p.createCanvas(100, 100); p.background(223); p.ellipse(50, 40, 60, 50); }; }, "ellipse_sketch_container-1");</script>
+:::
+:::
 
 ### Drawing Order
 When a program runs, the computer starts at the top and reads each line of code until it reaches the last line and then stops. If you want a shape to be drawn on top of all other shapes, it needs to follow the others in the code.
