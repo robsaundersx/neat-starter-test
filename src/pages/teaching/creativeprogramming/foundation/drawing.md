@@ -145,18 +145,19 @@ From the examples above, you can observe that the curves are drawn such that the
       p.setup = () => {
         p.createCanvas(100, 100);
         p.background(223);
+        p.curve(10, 90, 70, 80, 90, 30, 30, 10);
         p.push();
         p.noFill();
+        p.strokeWeight(2);
         p.push();
-        p.stroke(144, 223, 144);
+        p.stroke(0, 255, 0, 48);
         p.line(10, 90, 70, 80);
         p.pop();
         p.push();
-        p.stroke(223, 144, 144);
+        p.stroke(255, 0, 0, 38);
         p.line(90, 30, 30, 10);
         p.pop();
         p.pop();
-        p.curve(10, 90, 70, 80, 90, 30, 30, 10);
       };
     }, "curve_construction_sketch_container");
 </script>
@@ -171,18 +172,19 @@ From the examples above, you can observe that the curves are drawn such that the
       p.setup = () => {
         p.createCanvas(100, 100);
         p.background(223);
+        p.bezier(10, 90, 70, 80, 90, 30, 30, 10);
         p.push();
         p.noFill();
+        p.strokeWeight(2);
         p.push();
-        p.stroke(144, 223, 144);
+        p.stroke(0, 255, 0, 48);
         p.line(10, 90, 70, 80);
         p.pop();
         p.push();
-        p.stroke(223, 144, 144);
+        p.stroke(255, 0, 0, 48);
         p.line(90, 30, 30, 10);
         p.pop();
         p.pop();
-        p.bezier(10, 90, 70, 80, 90, 30, 30, 10);
       };
     }, "bezier_construction_sketch_container");
 </script>
