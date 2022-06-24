@@ -54,10 +54,24 @@ The `rect(x, y, w, h)`{.language-java} function takes four parameters, by defaul
 :::
 
 ::: flex flex-row gap-4
+{#square_sketch_container}
+
+The `square(x, y, s)`{.language-java} function takes three parameters, by default these specify the top-left corner (`x`{.language-java}, `y`{.language-java}) and size (`s`{.language-java}) of the square, e.g., `square(30, 20, 60)`{.language-java}
+<script>new p5( p => { p.setup = () => { p.createCanvas(100, 100); p.background(223); p.square(30, 20, 60); }; }, "square_sketch_container");</script>
+:::
+
+::: flex flex-row gap-4
 {#ellipse_sketch_container}
 
 The `ellipse(x, y, w, h)`{.language-java} function takes four parameters, by default these specify the center (`x`{.language-java}, `y`{.language-java}) and width (`w`{.language-java}) and height (`h`{.language-java}), e.g., `ellipse(50, 40, 60, 50)`{.language-java}
 <script>new p5( p => { p.setup = () => { p.createCanvas(100, 100); p.background(223); p.ellipse(50, 40, 60, 50); }; }, "ellipse_sketch_container");</script>
+:::
+
+::: flex flex-row gap-4
+{#circle_sketch_container}
+
+The `circle(x, y, d)`{.language-java} function takes three parameters, by default these specify the center (`x`{.language-java}, `y`{.language-java}) and diameter (`d`{.language-java}) of the circle, e.g., `circle(50, 40, 60)`{.language-java}
+<script>new p5( p => { p.setup = () => { p.createCanvas(100, 100); p.background(223); p.circle(50, 40, 60); }; }, "circle_sketch_container");</script>
 :::
 
 ::: flex flex-row gap-4
@@ -70,19 +84,23 @@ The `arc(x, y, w, h, a1, a2)`{.language-java} function takes four parameters, sp
 ::: flex flex-row gap-4
 {#curve_sketch_container}
 
-The `curve(x1, y1, x2, y2, x3, y3, x4, y4)`{.language-java} function takes eight parameters, specifying coordinates that the curve will pass through, e.g., `curve(10, 90, 70, 80, 90, 30, 30, 10)`{.language-java}
+The `curve(x1, y1, x2, y2, x3, y3, x4, y4)`{.language-java} function takes eight parameters, specifying the coordinates of the control points that define a Catmull-Rom spline, e.g., `curve(10, 90, 70, 80, 90, 30, 30, 10)`{.language-java}
 <script>new p5( p => { p.setup = () => { p.createCanvas(100, 100); p.background(223); p.curve(10, 90, 70, 80, 90, 30, 30, 10); }; }, "curve_sketch_container");</script>
 :::
 
 ::: flex flex-row gap-4
 {#bezier_sketch_container}
 
-The `bezier(x1, y1, x2, y2, x3, y3, x4, y4)`{.language-java} function takes eight parameters, specifying coordinates of the control points that define the Bezier curve, e.g., `curve(10, 90, 70, 80, 90, 30, 30, 10)`{.language-java}
+The `bezier(x1, y1, x2, y2, x3, y3, x4, y4)`{.language-java} function takes eight parameters, specifying coordinates of the control points that define the Bezier spline, e.g., `curve(10, 90, 70, 80, 90, 30, 30, 10)`{.language-java}
 <script>new p5( p => { p.setup = () => { p.createCanvas(100, 100); p.background(223); p.bezier(10, 90, 70, 80, 90, 30, 30, 10); }; }, "bezier_sketch_container");</script>
 :::
 
 
 :::
+
+#### Curves
+
+#### Vertices
 
 ### Drawing Order
 When a program runs, the computer starts at the top and reads each line of code until it reaches the last line and then stops. If you want a shape to be drawn on top of all other shapes, it needs to follow the others in the code.
