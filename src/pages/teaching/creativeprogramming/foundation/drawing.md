@@ -135,6 +135,58 @@ From the examples above, you can observe that the curves are drawn such that the
 </script>
 :::
 
+::: flex flex-row gap-4
+{#curve_construction_sketch_container}
+
+<script>
+  new p5(
+    p => {
+      p.setup = () => {
+        p.createCanvas(100, 100);
+        p.background(223);
+        p.push();
+        p.noFill();
+        p.push();
+        p.stroke(160, 223, 160);
+        p.line(10, 90, 70, 80);
+        p.pop();
+        p.push();
+        p.stroke(223, 160, 160);
+        p.line(90, 30, 30, 10);
+        p.pop();
+        p.pop();
+        curve(10, 90, 70, 80, 90, 30, 30, 10);
+      };
+    }, "curve_construction_sketch_container");
+</script>
+:::
+
+::: flex flex-row gap-4
+{#bezier_construction_sketch_container}
+
+<script>
+  new p5(
+    p => {
+      p.setup = () => {
+        p.createCanvas(100, 100);
+        p.background(223);
+        p.push();
+        p.noFill();
+        p.push();
+        p.stroke(160, 223, 160);
+        p.line(10, 90, 70, 80);
+        p.pop();
+        p.push();
+        p.stroke(223, 160, 160);
+        p.line(90, 30, 30, 10);
+        p.pop();
+        p.pop();
+        curve(10, 90, 70, 80, 90, 30, 30, 10);
+      };
+    }, "bezier_construction_sketch_container");
+</script>
+:::
+
 #### Vertices
 
 ### Drawing Order
