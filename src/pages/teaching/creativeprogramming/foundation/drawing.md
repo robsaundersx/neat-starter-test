@@ -106,6 +106,7 @@ From the examples above, you can observe that the curves are drawn such that the
 ::: flex flex-row gap-4
 {#arc_construction_sketch_container}
 
+We can better understand how arcs are constructed with the `arc()`{.language-java} function is we draw the ellipse described by the first four coordinates. This sketch does just that (drawn in blue) together with lines that show the start and stop angles.
 <script>
   new p5(
     p => {
@@ -221,11 +222,11 @@ From the examples above, you can observe that the curves are drawn such that the
         p.beginShape();
         p.vertex(30, 20);
         p.vertex(70, 20);
-        p.vertex(10, 50);
         p.vertex(90, 50);
-        p.vertex(30, 80);
         p.vertex(70, 80);
-        p.endShape();
+        p.vertex(30, 80);
+        p.vertex(10, 50);
+        p.endShape(p.CLOSE);
       };
     }, "vertex_sketch_container");
 </script>
