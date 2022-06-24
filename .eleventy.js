@@ -1,9 +1,10 @@
 const yaml = require("js-yaml");
 const { DateTime } = require("luxon");
 const markdownIt = require("markdown-it");
-const markdownItDefList = require("markdown-it-deflist");
 const markdownItAnchor = require("markdown-it-anchor");
 const markdownItAttrs = require('markdown-it-attrs');
+const markdownItDefList = require("markdown-it-deflist");
+const markdownItDiv = require("markdown-it-div");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const Prism = require("prismjs");
 const PrismLoader = require("prismjs/components/index.js");
@@ -35,6 +36,7 @@ module.exports = function (eleventyConfig) {
     rightDelimiter: '}',
     allowedAttributes: []  // empty array = all attributes are allowed
   }).use(markdownItDefList, {
+  }).use(markdownItDiv, {
   });
   // // .use(markdownItAnchor, {
   // //   permalink: markdownItAnchor.permalink.ariaHidden({
