@@ -211,7 +211,7 @@ We can better understand how arcs are constructed with the `arc()`{.language-jav
 #### Vertices
 
 ::: flex flex-row gap-4
-{#vertex_stetch_container}
+{#vertex_sketch_container}
 
 <script>
   new p5(
