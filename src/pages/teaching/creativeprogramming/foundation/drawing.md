@@ -418,42 +418,44 @@ To better understand the `arc()`{.language-java} function we can draw the ellips
 When a program runs, the computer starts at the top and reads each line of code until it reaches the last line and then stops. If you want a shape to be drawn on top of all other shapes, it needs to follow the others in the code.
 
 ::: flex flex-row gap-4 w-full
-{#order_sketch1}
+{#order_sketches}
 
-```java {.w-full}
+::: w-full
+
+These two sketches illustrate the effects of drawing order, they both draw a rectangle and a cicle but the first sketch draws the rectangle first:
+
+```java
 rect(20, 20, 40, 60);
-ellipse(60, 50, 30, 30);
+circle(60, 50, 30);
 ```
 
-<script>
-  new p5( p => {
-    p.setup = function() {
-      p.createCanvas(100, 100);
-      p.background(223);
-      p.rect(20, 20, 40, 60);
-      p.ellipse(60, 50, 30, 30);
-    };
-  }, "order_sketch1");
-</script>
+and the second one draws the circle first:
+
+```java
+circle(60, 50, 30);
+rect(20, 20, 40, 60);
+```
+
 :::
 
-::: flex flex-row gap-4 w-full
-{#order_sketch2}
-
-```java {.w-full}
-ellipse(60, 50, 30, 30);
-rect(20, 20, 40, 60);
-```
-
 <script>
   new p5( p => {
     p.setup = function() {
       p.createCanvas(100, 100);
       p.background(223);
-      p.ellipse(60, 50, 30, 30);
+      p.rect(20, 20, 40, 60);
+      p.circle(60, 50, 30);
+    };
+  }, "order_sketches");
+
+  new p5( p => {
+    p.setup = function() {
+      p.createCanvas(100, 100);
+      p.background(223);
+      p.circle(60, 50, 30);
       p.rect(20, 20, 40, 60);
     };
-  }, "order_sketch2");
+  }, "order_sketches");
 </script>
 :::
 
