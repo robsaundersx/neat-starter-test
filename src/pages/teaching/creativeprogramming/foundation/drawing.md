@@ -129,7 +129,7 @@ From the examples above, you can observe that the curves are drawn such that the
         p.popStyle();
         p.arc(50, 40, 60, 50, p.HALF_PI, p.PI);
       };
-    });
+    }, "arc_construction_sketch_container");
 </script>
 :::
 
