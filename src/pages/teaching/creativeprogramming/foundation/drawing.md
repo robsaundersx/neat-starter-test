@@ -187,6 +187,7 @@ From the examples above, you can observe that the curves are drawn such that the
 
 ::: flex flex-col gap-4
 `arc(50, 40, 60, 50, HALF_PI, PI)`{.language-java} {#arc_construction_sketch1}
+
 `arc(50, 40, 60, 50, PI/4, 3 * PI/5)`{.language-java} {#arc_construction_sketch2}
 :::
 
