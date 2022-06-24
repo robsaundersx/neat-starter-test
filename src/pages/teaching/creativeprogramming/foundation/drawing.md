@@ -312,9 +312,37 @@ To better understand the `arc()`{.language-java} function we can draw the ellips
 :::
 
 ::: flex flex-row gap-4
-{#bezier_construction_sketch}
+{#bezier_construction_sketches .flex .flex-col .gap-4}
 
 <script>
+  new p5(
+    p => {
+      p.setup = () => {
+        p.createCanvas(100, 100);
+        p.background(223);
+        p.bezier(30, 10, 70, 80, 90, 30, 10, 90);
+        p.push();
+          p.noFill();
+          p.strokeWeight(2);
+          p.push();
+            p.stroke(0, 192, 0, 48);
+            p.line(30, 10, 70, 80);
+          p.pop();
+          p.push();
+            p.stroke(192, 0, 0, 48);
+            p.line(90, 30, 10, 90);
+          p.pop();
+          p.strokeWeight(4);
+          p.stroke(0, 192, 0, 48);
+          p.point(30, 10);
+          p.point(70, 80);
+          p.stroke(192, 0, 0, 48);
+          p.point(90, 30);
+          p.point(10, 90);
+        p.pop();
+      };
+    }, "bezier_construction_sketches");
+
   new p5(
     p => {
       p.setup = () => {
@@ -341,7 +369,7 @@ To better understand the `arc()`{.language-java} function we can draw the ellips
           p.point(30, 10);
         p.pop();
       };
-    }, "bezier_construction_sketch");
+    }, "bezier_construction_sketches");
 </script>
 :::
 
