@@ -95,10 +95,43 @@ The `bezier(x1, y1, x2, y2, x3, y3, x4, y4)`{.language-java} function takes eigh
 <script>new p5( p => { p.setup = () => { p.createCanvas(100, 100); p.background(223); p.bezier(10, 90, 70, 80, 90, 30, 30, 10); }; }, "bezier_sketch_container");</script>
 :::
 
-
 :::
 
 #### Curves
+
+The `arc()`, `curve()` and `bezier()` drawing functions are worth spending additional time to understand.
+
+From the examples above, you can observe that the curves are drawn such that the interior of the curves are filled with a colour. This may not be what you expect but is consistent with the drawing of other shape primitives. You can easily remove the filled interior of these curves by calling the `noFill()` function before drawing them, as we will see below.
+
+::: flex flex-row gap-4
+{#arc_construction_sketch_container}
+
+<script>
+  new p5(
+    p => {
+      p.setup = () => {
+        p.createCanvas(100, 100);
+        p.background(223);
+        p.pushStyle();
+        p.noFill();
+        p.stroke(192);
+        p.ellipse(50, 40, 60, 50);
+        p.pushMatrix();
+        p.translate(50, 40);
+        p.rotate(p.HALF_PI);
+        p.line(0, 0, 50, 50);
+        p.popMatrix();
+        p.pushMatrix();
+        p.translate(50, 40);
+        p.rotate(p.PI);
+        p.line(0, 0, 50, 50);
+        p.popMatrix();
+        p.popStyle();
+        p.arc(50, 40, 60, 50, p.HALF_PI, p.PI);
+      };
+    });
+</script>
+:::
 
 #### Vertices
 
