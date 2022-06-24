@@ -186,8 +186,8 @@ From the examples above, you can observe that the curves are drawn such that the
 ::: flex flex-row gap-4
 
 ::: flex flex-col gap-4
-- {#arc_construction_sketch1}
-- {#arc_construction_sketch2}
+`arc(50, 40, 60, 50, HALF_PI, PI)`{.language-java} {#arc_construction_sketch1}
+`arc(50, 40, 60, 50, PI/4, 3 * PI/5)`{.language-java} {#arc_construction_sketch2}
 :::
 
 To better understand the `arc()`{.language-java} function we can draw the ellipse described by the first four coordinates (`x`{.language-java}, `y`{.language-java}, `w`{.language-java}, `h`{.language-java}). This sketch does just that (drawn in blue) together with lines that show the start and stop angles.
