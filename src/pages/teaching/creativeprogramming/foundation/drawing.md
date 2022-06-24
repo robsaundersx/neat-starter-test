@@ -63,8 +63,8 @@ The `ellipse(x, y, w, h)`{.language-java} function takes four parameters, by def
 ::: flex flex-row gap-4
 {#arc_sketch_container}
 
-The `arc(x, y, w, h, a1, a2)`{.language-java} function takes four parameters, specifying the centre coordinate (`x`{.language-java}, `y`{.language-java}), the width (`w`{.language-java}) and height (`h`{.language-java}), and the start (`a1`{.language-java}) and stop (`a2`{.language-java}) angles (in radians) for an arc, e.g., `arc(50, 40, 60, 40, PI/4, PI)`{.language-java}
-<script>new p5( p => { p.setup = () => { p.createCanvas(100, 100); p.background(223); p.arc(50, 40, 60, 40, PI/4, PI); }; }, "arc_sketch_container");</script>
+The `arc(x, y, w, h, a1, a2)`{.language-java} function takes four parameters, specifying the centre coordinate (`x`{.language-java}, `y`{.language-java}), the width (`w`{.language-java}) and height (`h`{.language-java}), and the start (`a1`{.language-java}) and stop (`a2`{.language-java}) angles (in radians) for an arc, e.g., `arc(50, 40, 60, 50, 0, PI)`{.language-java}
+<script>new p5( p => { p.setup = () => { p.createCanvas(100, 100); p.background(223); p.arc(50, 40, 60, 50, 0, PI); }; }, "arc_sketch_container");</script>
 :::
 
 ::: flex flex-row gap-4
