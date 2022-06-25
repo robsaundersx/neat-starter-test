@@ -184,7 +184,6 @@ The `arc()`{.language-java}, `curve()`{.language-java} and `bezier()`{.language-
 From the examples above, you can observe that the curves are drawn such that the interior of the curves are filled with a colour. This may not be what you expect but is consistent with the drawing of other shape primitives. You can easily remove the filled interior of these curves by calling the `noFill()`{.language-java} function before drawing them, as we will see below in [Drawing Styles](#drawing-styles).
 
 ::: flex flex-row gap-4
-
 {#arc_construction_sketches .flex .flex-col .gap-4}
 
 To better understand the `arc()`{.language-java} function we can draw the ellipse described by the first four coordinates (`x`{.language-java}, `y`{.language-java}, `w`{.language-java}, `h`{.language-java}). These sketches show the ellipse (blue) together with lines to indicate the start (green) and stop (red) angles. The first sketch illustrates the output of `arc(50, 40, 60, 50, HALF_PI, PI)`{.language-java} and the second sketch illustrates the output of `arc(50, 50, 40, 40, -PI/4, 3 * PI/5)`{.language-java}.
@@ -415,28 +414,25 @@ To better understand the `arc()`{.language-java} function we can draw the ellips
 :::
 
 ### Drawing Order
-When a program runs, the computer starts at the top and reads each line of code until it reaches the last line and then stops. If you want a shape to be drawn on top of all other shapes, it needs to follow the others in the code.
+When a program like those we've seen so far runs, Processing will interpret each line, starting at the top of the sketch and reading each line of code until it reaches the last line. To draw a shape on top of other shapes, it should follow the other shape in the code.
 
 ::: flex flex-row gap-4 w-full
 {#order_sketches .flex .flex-col .gap-4}
 
 ::: w-full
-
-These two sketches illustrate the effects of drawing order, they both draw a rectangle and a cicle but the first sketch draws the rectangle first:
+Both of these sketches draw a rectangle and a cicle but the first draws the rectangle first:
 
 ```java
 rect(20, 20, 40, 60);
 circle(60, 50, 30);
 ```
 
-and the second one draws the circle first:
+and the second draws the circle first:
 
 ```java
 circle(60, 50, 30);
 rect(20, 20, 40, 60);
 ```
-
-:::
 
 <script>
   new p5( p => {
@@ -457,6 +453,7 @@ rect(20, 20, 40, 60);
     };
   }, "order_sketches");
 </script>
+:::
 :::
 
 ### Drawing Modes {#drawing-modes}
