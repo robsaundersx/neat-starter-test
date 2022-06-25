@@ -413,6 +413,28 @@ To better understand the `arc()`{.language-java} function we can draw the ellips
 </script>
 :::
 
+::: flex flex-row gap-4
+{#curvevertex_sketch}
+
+<script>
+  new p5( p => {
+    p.setup = () => {
+      p.createCanvas(100, 100);
+      p.background(223);
+      p.beginShape();
+        p.curveVertex(30, 20);
+        p.curveVertex(70, 20);
+        p.curveVertex(90, 50);
+        p.curveVertex(70, 80);
+        p.curveVertex(30, 80);
+        p.curveVertex(10, 50);
+      p.endShape(p.CLOSE);
+    };
+  }, "curvevertex_sketch");
+</script>
+:::
+
+
 ### Drawing Order
 When a program like those we've seen so far runs, Processing will interpret each line, starting at the top of the sketch and reading each line of code until it reaches the last line. To draw a shape on top of other shapes, it should follow the other shape in the code.
 
@@ -457,5 +479,7 @@ rect(20, 20, 40, 60);
 :::
 
 ### Drawing Modes {#drawing-modes}
+
+Processing supports the way that primitive shapes are drawn, which effects how the parameters given to the drawing functions are interpreted.
 
 ### Drawing Styles {#drawing-styles}
