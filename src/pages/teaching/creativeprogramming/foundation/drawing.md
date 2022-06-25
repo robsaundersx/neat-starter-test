@@ -428,6 +428,7 @@ To better understand the `arc()`{.language-java} function we can draw the ellips
         p.curveVertex(70, 80);
         p.curveVertex(30, 80);
         p.curveVertex(10, 50);
+        p.curveVertex(30, 20);
       p.endShape(p.CLOSE);
     };
   }, "curvevertex_sketch");
